@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-purple: #341e60;
+  --color-brand-purpleAccent: #634bf5;
+  --color-brand-cream: #f8f2e9;
+  --color-brand-orange: #ff9500;
+  --color-brand-orangeCta: #ffc42e;
+  --color-brand-pink: #ffa1ff;
+  --color-brand-cyan: #a7f0ff;
+  --color-brand-cyanBright: #00d4ff;
+  --color-brand-yellow: #ffd109;
+  --color-brand-yellowPale: #fffbad;
+  --color-brand-green: #32e37b;
+  --color-brand-mint: #bbffd9;
+  --color-brand-white: #ffffff;
+
+  --font-display: "Gotham Rounded", sans-serif;
+  --font-body: "PP Agrandir", sans-serif;
+}
+
+@font-face {
+  font-family: 'Gotham Rounded';
+  src: url('./assets/fonts/GothamRoundedBold_21016.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url('./assets/fonts/PPAgrandir-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url('./assets/fonts/PPAgrandir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url('./assets/fonts/PPAgrandir-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PP Agrandir';
+  src: url('./assets/fonts/PPAgrandir-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply font-body text-brand-purple bg-brand-cream antialiased selection:bg-brand-purpleAccent selection:text-brand-white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-brand-purple;
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 30s linear infinite;
+  }
+  
+  .pause-on-hover:hover .animate-marquee,
+  .pause-on-hover:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
