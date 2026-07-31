@@ -1,11 +1,11 @@
 import type { Award } from '../types/content.types';
 
 export const biggestWins: Award[] = [
-  { name: "Mom's Choice", logo: "https://lingokids.com/wp-content/uploads/2026/03/Cover-01.png" },
-  { name: "PTPA Top Product", logo: "https://lingokids.com/wp-content/uploads/2026/03/Cover-02.png" },
-  { name: "Good Housekeeping", logo: "https://lingokids.com/wp-content/uploads/2026/03/Cover-03.png" },
-  { name: "TIME", logo: "https://lingokids.com/wp-content/uploads/2026/03/Cover-04.png" },
-  { name: "Fast Company", logo: "https://lingokids.com/wp-content/uploads/2026/03/Cover-05.png" },
+  { name: "Mom's Choice", logo: "https://placehold.co/400x400/FFD700/ffffff?text=Mom's+Choice" },
+  { name: "PTPA Top Product", logo: "https://placehold.co/400x400/8A2BE2/ffffff?text=PTPA" },
+  { name: "Good Housekeeping", logo: "https://placehold.co/400x400/003366/ffffff?text=Good+Housekeeping" },
+  { name: "TIME", logo: "https://placehold.co/400x400/FF0000/ffffff?text=TIME" },
+  { name: "Fast Company", logo: "https://placehold.co/400x400/9932CC/ffffff?text=Fast+Company" },
 ];
 
 export const bestOfTheRest: string[] = [

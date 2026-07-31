@@ -125,38 +125,81 @@ const CouncilSection = () => {
 
 const AwardsSection = () => {
   const revealRef = useScrollReveal();
+  
+  const awards = [
+    "Parent Tested Parent Approved",
+    "EdTech Awards",
+    "Kidscreen Awards",
+    "Good Housekeeping Awards",
+    "TIME Best Inventions",
+    "Fast Company Innovation"
+  ];
+  
   return (
-    <section className="bg-[#F9F6F0] w-full py-24 lg:py-32 relative overflow-hidden" ref={revealRef}>
-      {/* Animated floating background elements */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-[20%] left-[10%] text-[#FF9900] text-4xl animate-float" style={{ animationDelay: '0s' }}>★</div>
-        <div className="absolute top-[15%] right-[15%] text-[#00D4FF] text-3xl animate-float" style={{ animationDelay: '1s' }}>✦</div>
-        <div className="absolute bottom-[20%] left-[20%] text-[#FF3366] text-5xl animate-float" style={{ animationDelay: '0.5s' }}>✿</div>
-        <div className="absolute bottom-[30%] right-[10%] text-[#2D1457] text-4xl animate-float" style={{ animationDelay: '1.5s' }}>★</div>
-      </div>
+    <section className="bg-[#F9F6F0] w-full py-20 lg:py-28 relative overflow-hidden" ref={revealRef}>
+      <style>{`
+        @keyframes scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+        }
+      `}</style>
+      
+      <div className="flex flex-col items-center text-center gap-8 relative z-10 w-full">
+        
+        {/* Header & Subtitle */}
+        <div className="px-6 lg:px-12 flex flex-col gap-3 relative z-20">
+          <h2 className="font-display font-black text-5xl lg:text-7xl text-[#2D1457] leading-tight drop-shadow-sm">
+            Award-winning,<br/>again & again.
+          </h2>
+          <p className="font-body text-xl lg:text-2xl text-[#2D1457]/80 font-medium">
+            Recognized globally for safety and innovation.
+          </p>
+        </div>
+        
+        {/* Mascot Image with Decor */}
+        <div className="relative inline-flex justify-center w-full max-w-4xl mx-auto mt-2 px-6">
+          <div className="absolute top-10 left-[10%] text-[#FF9900] text-3xl animate-float" style={{ animationDelay: '0s' }}>★</div>
+          <div className="absolute top-24 right-[10%] text-[#00D4FF] text-2xl animate-float" style={{ animationDelay: '1s' }}>✦</div>
+          <div className="absolute bottom-16 left-[5%] text-[#FF3366] text-4xl animate-float" style={{ animationDelay: '0.5s' }}>✿</div>
+          <div className="absolute bottom-8 right-[5%] text-[#2D1457] text-3xl animate-float" style={{ animationDelay: '1.5s' }}>★</div>
 
-      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center gap-12 relative z-10">
-        <div className="relative group cursor-pointer">
-           <div className="w-40 h-40 bg-[#FFD700]/20 rounded-full flex items-center justify-center text-7xl absolute inset-0 animate-ping opacity-50"></div>
-           <div className="w-40 h-40 bg-[#FFD700] rounded-full flex items-center justify-center text-7xl shadow-xl transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12 animate-float relative z-10">
-             🏆
-           </div>
+          <img src="/awards-mascot.png" alt="Mascot holding trophy" className="w-[90%] max-w-[700px] h-auto object-contain z-10 relative drop-shadow-lg" />
         </div>
         
-        <h2 className="font-display font-black text-5xl lg:text-7xl text-[#2D1457] max-w-3xl leading-tight">
-          Award-winning,<br/>again & again.
-        </h2>
-        
-        <div className="flex flex-wrap justify-center gap-4 lg:gap-6 max-w-4xl mt-4">
-           <div className="px-6 py-3 bg-[#FF3366] text-white font-display font-bold text-xl rounded-full border-[3px] border-white shadow-lg transform rotate-[-3deg] hover:scale-110 hover:rotate-0 transition-all cursor-default">Mom's Choice</div>
-           <div className="px-6 py-3 bg-[#00D4FF] text-[#2D1457] font-display font-bold text-xl rounded-full border-[3px] border-white shadow-lg transform rotate-[2deg] hover:scale-110 hover:rotate-0 transition-all cursor-default">PTPA Top Product</div>
-           <div className="px-6 py-3 bg-[#FF9900] text-[#2D1457] font-display font-bold text-xl rounded-full border-[3px] border-white shadow-lg transform rotate-[-1deg] hover:scale-110 hover:rotate-0 transition-all cursor-default">Good Housekeeping</div>
-           <div className="px-6 py-3 bg-[#2D1457] text-white font-display font-bold text-xl rounded-full border-[3px] border-white shadow-lg transform rotate-[4deg] hover:scale-110 hover:rotate-0 transition-all cursor-default">TIME</div>
-           <div className="px-6 py-3 bg-[#00C2A8] text-white font-display font-bold text-xl rounded-full border-[3px] border-white shadow-lg transform rotate-[-2deg] hover:scale-110 hover:rotate-0 transition-all cursor-default">Fast Company</div>
+        {/* Infinite Marquee Slide Show */}
+        <div className="w-full overflow-hidden bg-[#F9F6F0] py-6 relative my-4">
+          {/* Fading Edges */}
+          <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-[#F9F6F0] to-transparent z-20 pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-[#F9F6F0] to-transparent z-20 pointer-events-none"></div>
+          
+          <div className="flex w-max animate-scroll-left hover:[animation-play-state:paused]">
+            {/* We render the sequence twice to create a seamless loop */}
+            {[1, 2].map((set) => (
+              <div key={set} className="flex justify-around items-center">
+                {awards.map((award, i) => (
+                  <div key={i} className="flex items-center gap-12 mx-6">
+                    <span className="font-display font-medium text-3xl text-[#2D1457] whitespace-nowrap">{award}</span>
+                    {/* Laurel SVG icon */}
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" className="text-[#FFB800] drop-shadow-sm">
+                      <path d="M12 22C12 22 5 15 5 8C5 5.5 7 3 9 3C10.5 3 11.5 4 12 5.5C12.5 4 13.5 3 15 3C17 3 19 5.5 19 8C19 15 12 22 12 22Z" fill="currentColor"/>
+                      <path d="M4 12C2 10 2 7 3 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M20 12C22 10 22 7 21 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M6 17C4 16 3 14 3 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                      <path d="M18 17C20 16 21 14 21 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         
-        <div className="mt-8">
-          <Button as="a" href="/awards" variant="primary" className="bg-[#FF3366] text-white hover:bg-[#E62E5C] text-xl px-10 py-5 rounded-full shadow-[0_8px_0_#C21B47] hover:translate-y-1 hover:shadow-[0_4px_0_#C21B47] transition-all">
+        {/* 3D Purple CTA Button */}
+        <div className="mt-2 px-6 pb-8">
+          <Button as="a" href="/awards" variant="primary" className="bg-[#7852FF] text-white font-bold text-xl px-12 py-5 rounded-full border-2 border-[#5433C7] shadow-[0_6px_0_#5433C7] hover:translate-y-[4px] hover:shadow-[0_2px_0_#5433C7] transition-all">
             See what we've won
           </Button>
         </div>

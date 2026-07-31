@@ -6,44 +6,62 @@ import { biggestWins, bestOfTheRest } from '../../data/awards.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-brand-pink w-full py-16 lg:py-32 relative overflow-hidden" ref={revealRef}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-          <h1 className="font-display font-bold text-6xl lg:text-[150px] text-brand-purple uppercase tracking-tight leading-none relative">
-            <span className="relative z-10">AWARDS</span>
-            <div className="absolute -inset-8 bg-brand-yellowPale/40 rounded-[100px] z-0 blur-xl"></div>
-          </h1>
-        </div>
-        <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="w-64 h-64 lg:w-96 lg:h-96 rounded-full bg-white/20 flex items-center justify-center relative shadow-xl border-4 border-brand-purple/5">
-             <span className="text-8xl">🏆</span>
-             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-brand-yellow rounded-full flex items-center justify-center text-4xl transform rotate-12 shadow-lg">
-               ⭐
-             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section className="w-full relative overflow-hidden bg-[#ffb3c6] flex justify-center items-center py-12 md:py-20 lg:py-24" ref={revealRef}>
+      <h1 className="sr-only">Awards</h1>
+      <img 
+        src="/awards-hero-new.png" 
+        alt="BingoKids Awards - 3D Characters Celebrating"
+        className="w-full max-w-[1400px] h-auto object-contain px-4 md:px-8 relative z-10"
+      />
+                                       </section>
   );
 };
 
 const BiggestWinsSection = () => {
   const revealRef = useScrollReveal();
+  
+  // Split into rows for the deliberate 3-2 grid layout
+  const topRow = biggestWins.slice(0, 3);
+  const bottomRow = biggestWins.slice(3, 5);
+
   return (
     <section className="bg-brand-yellowPale w-full py-16 lg:py-24" ref={revealRef}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-16">
-        <h2 className="font-display font-bold text-4xl lg:text-6xl text-brand-purple text-center">
-          Our biggest wins
-        </h2>
-        <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-16">
-          {biggestWins.map((award, i) => (
-             <div key={i} className="flex flex-col items-center gap-4">
-                <div className="w-32 h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden bg-white shadow-sm flex items-center justify-center p-4">
-                  <img src={award.logo} alt={award.name} className="w-full h-full object-contain mix-blend-multiply opacity-50" />
-                </div>
-                <span className="font-body font-bold text-brand-purple text-lg text-center max-w-[150px]">{award.name}</span>
-             </div>
-          ))}
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16">
+        <div className="text-center">
+          <h2 className="font-display font-bold text-4xl lg:text-6xl text-brand-purple">
+            Our biggest wins
+          </h2>
+          <p className="font-body text-xl lg:text-2xl text-brand-purple/80 mt-4">
+            Setting the standard for world-class entertainment.
+          </p>
+        </div>
+        
+        <div className="w-full flex flex-col gap-6">
+          {/* Top row: 3 items */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-[1000px] mx-auto justify-items-center">
+            {topRow.map((award, i) => (
+               <div key={i} className="bg-white rounded-3xl p-6 shadow-md hover:shadow-2xl hover:shadow-brand-purple/20 border-2 border-transparent hover:border-brand-purple/10 transform transition-all duration-500 hover:-translate-y-3 w-full max-w-[280px] aspect-square flex items-center justify-center group cursor-pointer">
+                  <img 
+                    src={award.logo} 
+                    alt={award.name} 
+                    className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-2" 
+                  />
+               </div>
+            ))}
+          </div>
+          
+          {/* Bottom row: 2 items */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[660px] mx-auto justify-items-center">
+            {bottomRow.map((award, i) => (
+               <div key={`bottom-${i}`} className="bg-white rounded-3xl p-6 shadow-md hover:shadow-2xl hover:shadow-brand-purple/20 border-2 border-transparent hover:border-brand-purple/10 transform transition-all duration-500 hover:-translate-y-3 w-full max-w-[280px] aspect-square flex items-center justify-center group cursor-pointer">
+                  <img 
+                    src={award.logo} 
+                    alt={award.name} 
+                    className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-2" 
+                  />
+               </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
