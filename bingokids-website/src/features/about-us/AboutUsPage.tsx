@@ -166,7 +166,7 @@ const AwardsSection = () => {
           <div className="absolute bottom-16 left-[5%] text-[#FF3366] text-4xl animate-float" style={{ animationDelay: '0.5s' }}>✿</div>
           <div className="absolute bottom-8 right-[5%] text-[#2D1457] text-3xl animate-float" style={{ animationDelay: '1.5s' }}>★</div>
 
-          <img src="/awards-mascot.png" alt="Mascot holding trophy" className="w-[90%] max-w-[700px] h-auto object-contain z-10 relative drop-shadow-lg" />
+          <img src="/awards-hero-new.png" alt="Mascot holding trophy" className="w-[90%] max-w-[700px] h-auto object-contain z-10 relative drop-shadow-lg" />
         </div>
         
         {/* Infinite Marquee Slide Show */}
