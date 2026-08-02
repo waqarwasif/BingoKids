@@ -21,56 +21,139 @@ const HeroSection = () => {
   );
 };
 
-const BlogCard = ({ post }: { post: any }) => (
-  <a href={post.link} className="flex flex-col gap-4 group cursor-pointer">
-    <div className="w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-md group-hover:shadow-[0_20px_40px_rgba(46,26,71,0.2)] transition-all duration-500 transform group-hover:-translate-y-3 relative">
-      <img src={post.image} alt="" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out" />
-      <div className="absolute inset-0 bg-brand-purple/0 group-hover:bg-brand-purple/5 transition-colors duration-500 pointer-events-none"></div>
-    </div>
-    <div className="flex flex-col gap-2 mt-2 px-1 transform transition-all duration-500 group-hover:translate-x-1">
-      <p className="font-body text-sm text-brand-purple/70 leading-snug">
-        {post.tag}
-      </p>
-      <h3 className="font-body font-bold text-2xl lg:text-[28px] text-brand-purple group-hover:text-brand-purpleAccent transition-colors duration-300 line-clamp-3 leading-tight">
-        {post.title}
-      </h3>
-    </div>
-  </a>
-);
+const cardStyles = [
+  { border: 'border-[#ff8c00]', bg: 'bg-[#ff8c00]', shadow: 'shadow-[#ff8c00]/25', shift: 'lg:mt-12' },
+  { border: 'border-[#8b5cf6]', bg: 'bg-[#8b5cf6]', shadow: 'shadow-[#8b5cf6]/25', shift: 'lg:mt-0' },
+  { border: 'border-[#ff6699]', bg: 'bg-[#ff6699]', shadow: 'shadow-[#ff6699]/25', shift: 'lg:mt-12' },
+];
+
+const BlogCard = ({ post, index = 0 }: { post: any, index?: number }) => {
+  const style = cardStyles[index % cardStyles.length];
+  
+  return (
+    <a href={post.link} className={`flex flex-col gap-5 group cursor-pointer pt-4 items-start w-full transition-transform duration-500 hover:-translate-y-2 ${style.shift}`}>
+      <div className={`relative w-full pt-[70%] rounded-[2rem] border-[6px] ${style.border} bg-white shadow-xl ${style.shadow} overflow-hidden transition-shadow duration-500 group-hover:shadow-2xl`}>
+        <img src={post.image} alt="" className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-110" />
+        
+        {/* Category Badge */}
+        <div className={`absolute top-4 left-4 px-5 py-2 rounded-full border-[3px] border-white ${style.bg} shadow-md z-10`}>
+          <span className="font-display font-bold text-white text-sm md:text-base tracking-wide shadow-sm drop-shadow-sm">
+            {post.tag}
+          </span>
+        </div>
+      </div>
+      
+      <div className="flex flex-col px-2 text-left w-full mt-2">
+        <h3 className="font-display font-bold text-2xl lg:text-[28px] text-[#2E1A47] group-hover:text-[#8b5cf6] transition-colors duration-300 leading-tight">
+          {post.title}
+        </h3>
+      </div>
+    </a>
+  );
+};
 
 const BlogSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-brand-mint w-full py-16 lg:py-24" ref={revealRef}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16 items-center">
-        <div className="flex flex-col items-center gap-2 text-center">
-          <h2 className="font-display font-bold text-5xl lg:text-6xl text-brand-purple">Blog</h2>
-          <p className="font-body text-xl lg:text-2xl text-brand-purple/80 mt-2">
-            Latest stories from inside Lingokids.
+    <section className="bg-[#d9f9e3] w-full py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
+      {/* Background Doodles */}
+      <div className="absolute inset-0 pointer-events-none opacity-80 text-[#2E1A47]">
+        {/* Bottom left flower */}
+        <div className="absolute bottom-32 left-8 md:left-24 transform -rotate-12">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z"></path><path d="M12 22c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"></path><path d="M22 12c0-1.66-1.34-3-3-3s-3 1.34-3 3 1.34 3 3 3 3-1.34 3-3z"></path><path d="M2 12c0-1.66 1.34-3 3-3s3 1.34 3 3-1.34 3-3 3-3-1.34-3-3z"></path></svg>
+        </div>
+        
+        {/* Bottom right speech bubble */}
+        <div className="absolute bottom-20 right-8 md:right-24 transform -rotate-6">
+          <svg width="100" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M9 10h.01"></path><path d="M15 10h.01"></path><path d="M10 14c1.5 1.5 3.5 1.5 5 0"></path></svg>
+        </div>
+      </div>
+
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-16 lg:gap-20 items-center relative z-10">
+        <div className="flex flex-col items-center gap-4 text-center relative w-full max-w-2xl mx-auto mt-8">
+          {/* Top Right Doodles relative to the header */}
+          <div className="absolute -top-12 -right-8 md:-right-16 transform rotate-[15deg] text-[#2E1A47] opacity-80">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div className="absolute top-0 -right-24 md:-right-36 transform rotate-45 text-[#2E1A47] opacity-80">
+            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+          </div>
+
+          <h2 className="font-display font-bold text-5xl lg:text-7xl text-brand-purple tracking-tight drop-shadow-sm">Blog</h2>
+          <p className="font-body text-xl lg:text-2xl text-brand-purple/80">
+            Latest stories from inside Bingokids.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-12 w-full">
-          {blogPosts.map((post, i) => <BlogCard key={i} post={post} />)}
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 gap-y-16 lg:gap-12 w-full mt-4 items-start">
+          {blogPosts.map((post, i) => <BlogCard key={i} post={post} index={i} />)}
         </div>
-        <div className="mt-4">
-          <Button as="a" href="#" variant="purple">See More</Button>
+        
+        <div className="mt-12 relative z-20">
+          <Button as="a" href="#" variant="purple" className="px-12 py-4 text-xl">
+            See More
+          </Button>
         </div>
       </div>
     </section>
   );
 };
 
+const diveStyles = [
+  { ring: 'ring-[#ff8c00]/40', bg: 'bg-[#ff8c00]' },
+  { ring: 'ring-[#8b5cf6]/40', bg: 'bg-[#8b5cf6]' },
+  { ring: 'ring-[#ff6699]/40', bg: 'bg-[#ff6699]' },
+];
+
+const DiveDeeperCard = ({ post, index = 0 }: { post: any, index?: number }) => {
+  const style = diveStyles[index % diveStyles.length];
+  
+  return (
+    <a href={post.link} className="flex flex-col gap-4 group cursor-pointer w-full hover:-translate-y-2 transition-transform duration-500">
+      <div className={`relative w-full aspect-[4/3] rounded-3xl overflow-hidden border-4 border-white shadow-md ring-4 ${style.ring} transition-shadow duration-500 group-hover:shadow-xl`}>
+        <img src={post.image} alt="" className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 ease-out group-hover:scale-105" />
+        
+        {/* Category Badge - Bottom Left Overlapping */}
+        <div className={`absolute bottom-3 left-3 px-4 py-1.5 rounded-full ${style.bg} shadow-sm z-10`}>
+          <span className="font-display font-bold text-white text-xs md:text-sm tracking-wide">
+            {post.tag}
+          </span>
+        </div>
+      </div>
+      
+      <div className="flex flex-col px-1 text-left w-full mt-1">
+        <h3 className="font-display font-bold text-xl lg:text-2xl text-[#2E1A47] group-hover:text-[#8b5cf6] transition-colors duration-300 leading-tight">
+          {post.title}
+        </h3>
+      </div>
+    </a>
+  );
+};
+
 const DiveDeeperSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-brand-cream w-full py-16 lg:py-24" ref={revealRef}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
+    <section className="bg-brand-cream w-full py-16 lg:py-24 relative overflow-hidden" ref={revealRef}>
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-12 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <h2 className="font-display font-bold text-4xl lg:text-6xl text-brand-purple">Dive deeper</h2>
-          <Button as="a" href="#" variant="secondary">See More</Button>
+          <div className="relative">
+             {/* Small doodle accent next to heading */}
+             <div className="absolute -top-6 -right-10 transform rotate-[15deg] text-[#ff8c00] opacity-80">
+               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+             </div>
+             <h2 className="font-display font-bold text-4xl lg:text-6xl text-brand-purple relative z-10">Dive deeper</h2>
+          </div>
+          
+          <Button as="a" href="#" variant="secondary" className="gap-2 px-8 py-3 text-lg">
+            See More
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </Button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
-          {deepDivePosts.map((post, i) => <BlogCard key={i} post={post} />)}
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {deepDivePosts.map((post, i) => <DiveDeeperCard key={i} post={post} index={i} />)}
         </div>
       </div>
     </section>
@@ -80,25 +163,60 @@ const DiveDeeperSection = () => {
 const InTheMediaSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-brand-orange w-full py-16 lg:py-24" ref={revealRef}>
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-12">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          <h2 className="font-display font-bold text-4xl lg:text-6xl text-brand-purple">In the media</h2>
-          <Button as="a" href="#" variant="purple">Check our latest Press Releases</Button>
+    <section className="bg-[#ff8c00] w-full py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
+      {/* Background Doodles */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03] text-black">
+        <svg className="absolute top-10 left-10 w-24 h-24" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        <svg className="absolute bottom-10 right-20 w-32 h-32" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+      </div>
+
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-16 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative">
+          <div className="relative text-center md:text-left">
+             {/* Megaphone doodle accent next to heading */}
+             <div className="absolute -top-8 -right-12 md:-right-16 transform rotate-[15deg] text-[#2E1A47] opacity-80 hidden sm:block">
+               <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M11 10.5V14"></path><path d="M11 7h4l6 3-6 3h-4v-6z"></path><path d="M3 10h4v4H3v-4z"></path><path d="M7 14v4l4-2"></path></svg>
+             </div>
+             <h2 className="font-display font-bold text-5xl lg:text-7xl text-[#2E1A47] relative z-10 drop-shadow-sm">In the media</h2>
+          </div>
+          
+          <Button as="a" href="#" variant="pink" className="gap-3 whitespace-nowrap px-8 py-4 text-lg">
+            Check our latest Press Releases
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </Button>
         </div>
-        <div className="relative px-2">
+        
+        <div className="relative px-2 mt-4">
           <Carousel 
             items={pressMentions}
             showArrow={true}
             renderItem={(mention) => (
-              <div className="bg-brand-cream rounded-[2rem] p-8 flex flex-col justify-between gap-8 h-full min-h-[250px] group cursor-pointer hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(46,26,71,0.2)] transition-all duration-500 border-2 border-transparent hover:border-brand-purple/10">
-                 <h3 className="font-body font-bold text-2xl lg:text-3xl text-brand-purple leading-tight group-hover:text-brand-purpleAccent transition-colors duration-300">
-                   "{mention.title}"
+              <div className="bg-[#fff9f0] rounded-[2.5rem] p-8 lg:p-10 flex flex-col justify-between gap-10 h-full min-h-[300px] group cursor-pointer hover:-translate-y-4 shadow-[0_10px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_rgba(46,26,71,0.2)] transition-all duration-500 relative overflow-hidden border-[6px] border-white">
+                 
+                 {/* Giant Quote Watermark */}
+                 <div className="absolute -top-6 -left-2 text-[#8b5cf6] opacity-10 font-display text-[180px] leading-none select-none pointer-events-none group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500">
+                    "
+                 </div>
+
+                 <h3 className="font-display font-bold text-2xl lg:text-[32px] text-[#2E1A47] leading-tight relative z-10 group-hover:text-[#8b5cf6] transition-colors duration-300">
+                   {mention.title}
                  </h3>
-                 <div className="flex items-center justify-between mt-auto">
-                   <span className="font-body font-bold text-brand-purple/60 group-hover:text-brand-purple transition-colors duration-300">{mention.outlet}</span>
-                   <div className="w-10 h-10 rounded-full border-2 border-brand-purple/20 flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple group-hover:-rotate-45 transition-all duration-500 shadow-sm">
-                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                 
+                 <div className="flex items-center justify-between mt-auto relative z-10 pt-6 border-t-2 border-black/5">
+                   <div className="flex items-center gap-4">
+                     {mention.logo && (
+                       <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden border-[3px] border-white shadow-md flex-shrink-0 bg-white">
+                         <img src={mention.logo} alt={mention.outlet} className="w-full h-full object-cover" />
+                       </div>
+                     )}
+                     <span className="font-display font-bold text-lg lg:text-xl text-brand-purple/80 group-hover:text-[#ff8c00] transition-colors duration-300">
+                       {mention.outlet}
+                     </span>
+                   </div>
+                   <div className="w-12 h-12 rounded-full bg-white border-2 border-black/5 shadow-sm flex items-center justify-center text-[#2E1A47] group-hover:bg-[#ff8c00] group-hover:text-white group-hover:border-[#ff8c00] group-hover:-rotate-45 transition-all duration-500 flex-shrink-0">
+                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                        <path d="M5 12h14M12 5l7 7-7 7"/>
                      </svg>
                    </div>

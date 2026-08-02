@@ -5,24 +5,24 @@ export const homeHero: HeroContent = {
   subheading: 'The home of outstanding content without compromise.',
   button: { label: 'Download free', href: '#' },
   secondaryButton: { label: 'FUN THIS WAY', href: '#' },
-  video: 'https://lingokids.com/wp-content/uploads/2025/04/lk_AppPreview_ENG_1920x1080_v2-1.mp4',
+  video: '/home-video.mp4',
 };
 
 export const homeFeatures: FeatureCard[] = [
   {
     title: 'Game on',
     description: 'Action-packed games for thrill seekers (and skill seekers).',
-    image: 'https://lingokids.com/wp-content/uploads/2026/04/play-1.svg',
+    image: '/game-on.jpg',
   },
   {
     title: 'Tune in',
     description: 'Award-winning shows with your kid’s favorite characters.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/04/stream-1.svg',
+    image: '/tune-in.jpg',
   },
   {
     title: 'Turn it up',
     description: 'Can’t stop sing-alongs and podcasts to inspire.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/04/listen-1.svg',
+    image: '/turn-it-up.jpg',
   }
 ];
 
@@ -35,7 +35,7 @@ export const homeTestimonials: Testimonial[] = [
   },
   {
     type: 'photo',
-    image: "https://lingokids.com/wp-content/uploads/2026/03/dad-girl.jpg",
+    image: "/dad-girl-study.jpg",
   },
   {
     type: 'review',
@@ -51,6 +51,6 @@ export const homeTestimonials: Testimonial[] = [
   },
   {
     type: 'photo',
-    image: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/child-bubble.jpg",
   }
 ];

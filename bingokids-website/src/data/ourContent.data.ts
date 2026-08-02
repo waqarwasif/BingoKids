@@ -2,7 +2,7 @@ export const contentFeatures = [
   {
     title: 'Game on',
     description: 'Interactive games that make learning a blast.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/03/Cover-01.png',
+    image: '/content-game.jpg',
     bgColor: 'bg-brand-purple',
     textColor: 'text-white',
     reverse: false,
@@ -10,7 +10,7 @@ export const contentFeatures = [
   {
     title: 'Tune in',
     description: 'Catchy songs and videos to sing and dance along to.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/03/Cover-02.png',
+    image: '/content-lessons.jpg',
     bgColor: 'bg-brand-pink',
     textColor: 'text-brand-purple',
     reverse: true,
@@ -18,7 +18,7 @@ export const contentFeatures = [
   {
     title: 'Double the fun',
     description: 'Activities you can do together, anytime, anywhere.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/03/Cover-03.png',
+    image: '/content-theater.jpg',
     bgColor: 'bg-brand-yellow',
     textColor: 'text-brand-purple',
     reverse: false,
@@ -26,7 +26,7 @@ export const contentFeatures = [
   {
     title: 'Level up',
     description: 'Track progress and celebrate every milestone.',
-    image: 'https://lingokids.com/wp-content/uploads/2026/03/Cover-04.png',
+    image: '/content-together.jpg',
     bgColor: 'bg-brand-cyan',
     textColor: 'text-brand-purple',
     reverse: true,
