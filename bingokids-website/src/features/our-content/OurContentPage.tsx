@@ -5,7 +5,7 @@ import { worldsCharacters } from '../../data/ourContent.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-gradient-to-b from-[#0055cc] via-[#0077ff] to-[#0099ff] w-full pt-12 lg:pt-20 flex flex-col items-center relative z-20" ref={revealRef}>
+    <section className="bg-gradient-to-b from-[#0055cc] via-[#0077ff] to-[#0099ff] w-full pt-[120px] lg:pt-[140px] flex flex-col items-center relative z-20" ref={revealRef}>
       <div className="flex flex-col items-center text-center px-6 relative z-10 mb-6 lg:mb-10">
         <h2 className="text-white font-display font-black text-xl lg:text-2xl mb-1 opacity-90 tracking-wide">So many ways to</h2>
         

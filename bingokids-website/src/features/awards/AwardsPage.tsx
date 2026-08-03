@@ -6,7 +6,7 @@ import { biggestWins, bestOfTheRest } from '../../data/awards.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-[#ff6eb8] w-full pt-16 sm:pt-24 lg:pt-32 pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
+    <section className="bg-[#ff6eb8] w-full pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
       <h1 className="sr-only">Awards</h1>
       <img 
         src="/awards-hero-new.png" 

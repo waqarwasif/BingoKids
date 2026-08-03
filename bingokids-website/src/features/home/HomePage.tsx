@@ -19,7 +19,7 @@ const HeroSection = () => {
         <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-16 pt-16 sm:pt-24 lg:pt-32 pb-24 sm:pb-36 lg:pb-48 flex flex-col lg:flex-row items-center gap-12 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-16 pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-24 sm:pb-36 lg:pb-48 flex flex-col lg:flex-row items-center gap-12 relative z-10">
         
         {/* Left Content */}
         <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left gap-6 lg:mt-[-50px]">

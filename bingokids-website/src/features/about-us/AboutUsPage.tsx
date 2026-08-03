@@ -7,7 +7,7 @@ const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
     <>
-      <section className="bg-[#a3edf8] w-full pt-4 lg:pt-8 pb-4 lg:pb-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[40vh] lg:min-h-[50vh]" ref={revealRef}>
+      <section className="bg-[#a3edf8] w-full pt-[120px] lg:pt-[140px] pb-4 lg:pb-8 relative overflow-hidden flex flex-col items-center justify-center min-h-[40vh] lg:min-h-[50vh]" ref={revealRef}>
         
         <div className="w-full max-w-[1200px] flex justify-center relative z-10 hover:scale-105 transition-transform duration-500">
           <img 

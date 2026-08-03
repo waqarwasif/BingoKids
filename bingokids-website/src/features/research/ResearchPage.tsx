@@ -6,7 +6,7 @@ import { learningFeatures, proofReports, independentStudies } from '../../data/r
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="w-full relative overflow-hidden bg-[#FF8A00]" ref={revealRef}>
+    <section className="w-full relative overflow-hidden bg-[#FF8A00] pt-[120px] lg:pt-[140px]" ref={revealRef}>
       <h1 className="sr-only">Research</h1>
       <div className="w-full max-w-[1600px] mx-auto flex justify-center items-end">
         <img 

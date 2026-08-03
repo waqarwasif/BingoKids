@@ -8,7 +8,7 @@ import { blogPosts, deepDivePosts, pressMentions } from '../../data/news.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="w-full relative overflow-hidden bg-[#bde22a]" ref={revealRef}>
+    <section className="w-full relative overflow-hidden bg-[#bde22a] pt-[120px] lg:pt-[140px]" ref={revealRef}>
       <h1 className="sr-only">News</h1>
       <div className="w-full max-w-[1600px] mx-auto flex justify-center items-end">
         <img 
