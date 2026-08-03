@@ -70,7 +70,7 @@ export function Carousel<T>({ items, renderItem, showArrow = true, className = '
           {items.map((item, idx) => (
             <div 
               key={idx} 
-              className={`shrink-0 ${!isDesktop ? 'snap-center snap-always w-[85vw]' : 'w-[320px] xl:w-[380px]'}`}
+              className={`shrink-0 ${!isDesktop ? 'snap-center snap-always w-[85vw] sm:w-[340px] md:w-[360px] max-w-[420px]' : 'w-[320px] xl:w-[380px]'}`}
             >
               {renderItem(item, idx)}
             </div>

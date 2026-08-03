@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
 
         {/* Center Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center">
-          <Link to="/" className="font-display font-bold text-4xl tracking-tighter text-white hover:opacity-90 transition-opacity">
+          <Link to="/" className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl tracking-tighter text-white hover:opacity-90 transition-opacity">
             Bingokids
           </Link>
         </div>
@@ -53,13 +53,13 @@ export const Header: React.FC = () => {
         {/* Right Nav */}
         <div className="hidden lg:flex items-center gap-5">
           <div className="flex items-center gap-1.5">
-            <svg className="w-3.5 h-3.5 text-[#ff9500]" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-3.5 h-3.5 text-brand-yellow" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
             <span className="font-body font-normal text-[11px] text-white">4.7 by 1M families</span>
           </div>
-          <div className="flex items-center border border-white/20 rounded bg-[#0a52b8] px-2 py-1 shadow-sm gap-1">
-             <span className="text-[9px] font-black text-[#ffc42e] leading-none tracking-tight">kidSAFE</span>
+          <div className="flex items-center border border-white/20 rounded bg-[#0284c7] px-2 py-1 shadow-sm gap-1">
+             <span className="text-[9px] font-black text-[#fbd15f] leading-none tracking-tight">kidSAFE</span>
              <span className="text-[6px] font-bold text-white leading-none tracking-widest mt-0.5">COPPA CERTIFIED</span>
           </div>
           <button className="flex items-center gap-1 font-body font-normal text-[11px] uppercase text-white hover:text-brand-yellowPale transition-colors">

@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-purple: #341e60;
-  --color-brand-purpleAccent: #634bf5;
-  --color-brand-cream: #f8f2e9;
-  --color-brand-orange: #ff9500;
-  --color-brand-orangeCta: #ffc42e;
-  --color-brand-pink: #ffa1ff;
-  --color-brand-cyan: #a7f0ff;
-  --color-brand-cyanBright: #00d4ff;
-  --color-brand-yellow: #ffd109;
-  --color-brand-yellowPale: #fffbad;
-  --color-brand-green: #32e37b;
-  --color-brand-mint: #bbffd9;
+  --color-brand-purple: #0077ff;       /* Vibrant Kid-Friendly Royal Blue for header, footer & hero */
+  --color-brand-purpleDark: #0055cc;   /* Rich Deep Ocean Blue for high-contrast text */
+  --color-brand-purpleAccent: #38bdf8; /* Bright Sky Blue */
+  --color-brand-cream: #f0f9ff;        /* Soft Sky Tinted Cream */
+  --color-brand-cyan: #a3edf8;         /* Sky Blue */
+  --color-brand-cyanBright: #00d4ff;   /* Bright Cyan */
+  --color-brand-yellow: #fbd15f;       /* Sunshine Yellow */
+  --color-brand-yellowPale: #fffbeb;   /* Warm Pale Yellow */
+  --color-brand-pink: #ff2a85;         /* Vibrant Rich Kid Pink */
+  --color-brand-green: #32e37b;        /* Vibrant Kid Green */
+  --color-brand-mint: #bde22a;         /* Lime Green */
+  --color-brand-lavender: #e0bdff;     /* Soft Lavender */
+  --color-brand-orange: #ff8a00;       /* Bright Playful Orange */
+  --color-brand-orangeCta: #fbd15f;    /* Yellow CTA */
   --color-brand-white: #ffffff;
 
   --font-display: "Gotham Rounded", sans-serif;
@@ -75,6 +77,19 @@
   .pause-on-hover:hover .animate-marquee-reverse {
     animation-play-state: paused;
   }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .animate-gradient-shift {
+    background-size: 300% 300%;
+    animation: color-shift-trio 8s ease infinite;
+  }
 }
 
 @keyframes marquee {
@@ -85,4 +100,10 @@
 @keyframes marquee-reverse {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0%); }
+}
+
+@keyframes color-shift-trio {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

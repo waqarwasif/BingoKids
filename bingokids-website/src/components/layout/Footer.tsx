@@ -17,11 +17,11 @@ export const Footer: React.FC<FooterProps> = ({ qrBgColorClass = 'bg-brand-cream
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16 lg:mb-24">
           {/* Column 1 */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-body font-bold text-sm tracking-widest text-brand-purpleAccent uppercase">GET BINGOKIDS</h4>
+            <h4 className="font-body font-black text-sm tracking-widest text-[#fbd15f] uppercase drop-shadow-sm">GET BINGOKIDS</h4>
             <ul className="flex flex-col gap-4">
               {footerData.getBingokids.map(link => (
                 <li key={link.label}>
-                  <a href={link.href} className="font-body font-bold text-lg hover:text-brand-yellowPale transition-colors">{link.label}</a>
+                  <a href={link.href} className="font-body font-bold text-lg text-white hover:text-[#fbd15f] transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -29,11 +29,11 @@ export const Footer: React.FC<FooterProps> = ({ qrBgColorClass = 'bg-brand-cream
           
           {/* Column 2 */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-body font-bold text-sm tracking-widest text-brand-purpleAccent uppercase">CONTACT US</h4>
+            <h4 className="font-body font-black text-sm tracking-widest text-[#fbd15f] uppercase drop-shadow-sm">CONTACT US</h4>
             <ul className="flex flex-col gap-4">
               {footerData.contactUs.map(link => (
                 <li key={link.label}>
-                  <Link to={link.href} className="font-body font-bold text-lg hover:text-brand-yellowPale transition-colors">{link.label}</Link>
+                  <Link to={link.href} className="font-body font-bold text-lg text-white hover:text-[#fbd15f] transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -41,11 +41,11 @@ export const Footer: React.FC<FooterProps> = ({ qrBgColorClass = 'bg-brand-cream
           
           {/* Column 3 */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-body font-bold text-sm tracking-widest text-brand-purpleAccent uppercase">FOR EDUCATORS</h4>
+            <h4 className="font-body font-black text-sm tracking-widest text-[#fbd15f] uppercase drop-shadow-sm">FOR EDUCATORS</h4>
             <ul className="flex flex-col gap-4">
               {footerData.forEducators.map(link => (
                 <li key={link.label}>
-                  <a href={link.href} className="font-body font-bold text-lg hover:text-brand-yellowPale transition-colors">{link.label}</a>
+                  <a href={link.href} className="font-body font-bold text-lg text-white hover:text-[#fbd15f] transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>
@@ -53,11 +53,11 @@ export const Footer: React.FC<FooterProps> = ({ qrBgColorClass = 'bg-brand-cream
           
           {/* Column 4 */}
           <div className="flex flex-col gap-6">
-            <h4 className="font-body font-bold text-sm tracking-widest text-brand-purpleAccent uppercase">FOLLOW US</h4>
+            <h4 className="font-body font-black text-sm tracking-widest text-[#fbd15f] uppercase drop-shadow-sm">FOLLOW US</h4>
             <ul className="flex flex-col gap-4">
               {footerData.followUs.map(link => (
                 <li key={link.label}>
-                  <a href={link.href} className="font-body font-bold text-lg hover:text-brand-yellowPale transition-colors">{link.label}</a>
+                  <a href={link.href} className="font-body font-bold text-lg text-white hover:text-[#fbd15f] transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>

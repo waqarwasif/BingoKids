@@ -16,13 +16,13 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   ...props 
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-display font-bold text-lg rounded-full px-8 py-4 transition-all duration-300 ease-out select-none';
+  const baseClasses = 'inline-flex items-center justify-center font-display font-bold text-base sm:text-lg rounded-full px-6 py-3.5 sm:px-8 sm:py-4 transition-all duration-300 ease-out select-none text-center';
   
   const variants = {
-    primary: 'bg-brand-orange text-brand-purple border-[3.5px] border-brand-purple shadow-[6px_6px_0_0_#211242] hover:shadow-[0px_0px_0_0_#211242] hover:translate-x-[6px] hover:translate-y-[6px]', // Neo-brut UI
-    secondary: 'bg-gradient-to-b from-[#a770ff] to-[#7a35ff] text-white shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),0_8px_16px_rgba(122,53,255,0.4)] hover:shadow-[inset_0_4px_8px_rgba(255,255,255,0.7),0_12px_24px_rgba(122,53,255,0.6)] hover:-translate-y-1 border border-[#b388ff]', // Skeuomo/Chrome UI
-    purple: 'bg-[#2E1A47] text-white shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:shadow-[0_0_35px_rgba(139,92,246,1),inset_0_0_15px_rgba(139,92,246,0.4)] border-2 border-[#8b5cf6]/50 hover:border-[#8b5cf6] hover:-translate-y-1', // Glow/Neon UI
-    pink: 'bg-white/40 backdrop-blur-md text-brand-purple border-[2px] border-white/60 shadow-[0_8px_32px_rgba(255,102,153,0.25)] hover:bg-white/60 hover:shadow-[0_8px_32px_rgba(255,102,153,0.4)] hover:-translate-y-1', // Glass UI
+    primary: 'bg-brand-yellow text-brand-purple border-[3.5px] border-brand-purple shadow-[6px_6px_0_0_#162a45] hover:shadow-[0px_0px_0_0_#162a45] hover:translate-x-[6px] hover:translate-y-[6px]', // Neo-brut Yellow UI
+    secondary: 'bg-gradient-to-b from-[#38bdf8] to-[#0284c7] text-white shadow-[inset_0_2px_4px_rgba(255,255,255,0.4),0_8px_16px_rgba(2,132,199,0.4)] hover:shadow-[inset_0_4px_8px_rgba(255,255,255,0.7),0_12px_24px_rgba(2,132,199,0.6)] hover:-translate-y-1 border border-[#7dd3fc]', // Ocean Blue UI
+    purple: 'bg-[#162a45] text-white shadow-[0_0_20px_rgba(56,189,248,0.6)] hover:shadow-[0_0_35px_rgba(56,189,248,1),inset_0_0_15px_rgba(56,189,248,0.4)] border-2 border-[#38bdf8]/50 hover:border-[#38bdf8] hover:-translate-y-1', // Glow Blue UI
+    pink: 'bg-[#ff2a85] text-white border-[2px] border-white/60 shadow-[0_8px_32px_rgba(255,42,133,0.35)] hover:bg-[#e01a70] hover:-translate-y-1', // Vibrant Pink UI
   };
 
   const classes = `${baseClasses} ${variants[variant]} ${className}`;
