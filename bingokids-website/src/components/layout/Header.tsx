@@ -71,26 +71,48 @@ export const Header: React.FC = () => {
         
         {/* Left Nav */}
         <nav className="hidden lg:flex items-center gap-2 font-body font-bold text-[12px] tracking-wider">
-          {navigation.map((item) => (
+          {navigation.map((item) => {
+            const isActive = location.pathname === item.href;
+            return (
             <Link 
               key={item.label} 
               to={item.href} 
-              className={`px-4 py-2 rounded-full ${hoverTextClass} transition-all duration-300 hover:scale-105 active:scale-95 uppercase flex items-center gap-1 shadow-[0_0_0_0_rgba(255,255,255,0)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]`}
+              className={`px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 uppercase flex items-center gap-1.5 ${
+                isActive 
+                  ? `${hoverTextClass.replace(/hover:/g, '')} shadow-[0_4px_12px_rgba(0,0,0,0.15)] scale-[1.05]` 
+                  : `${hoverTextClass} shadow-[0_0_0_0_rgba(255,255,255,0)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]`
+              }`}
             >
               {item.label}
+              {isActive && (
+                 <span className="flex h-2 w-2 relative">
+                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
+                   <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
+                 </span>
+              )}
             </Link>
-          ))}
+          )})}
           
           <div 
             className="relative group"
             onMouseEnter={() => setIsMoreOpen(true)}
             onMouseLeave={() => setIsMoreOpen(false)}
           >
-            <button className={`flex items-center gap-1 px-4 py-2 rounded-full ${hoverTextClass} transition-all duration-300 hover:scale-105 active:scale-95 uppercase`}>
+            <button className={`flex items-center gap-1.5 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 uppercase ${
+              moreDropdown.some(item => location.pathname === item.href)
+                ? `${hoverTextClass.replace(/hover:/g, '')} shadow-[0_4px_12px_rgba(0,0,0,0.15)] scale-[1.05]` 
+                : `${hoverTextClass} shadow-[0_0_0_0_rgba(255,255,255,0)] hover:shadow-[0_4px_12px_rgba(0,0,0,0.15)]`
+            }`}>
               MORE
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${isMoreOpen ? 'rotate-180' : ''}`}>
                 <path d="M6 9l6 6 6-6"/>
               </svg>
+              {moreDropdown.some(item => location.pathname === item.href) && (
+                 <span className="flex h-2 w-2 relative">
+                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-current opacity-75"></span>
+                   <span className="relative inline-flex rounded-full h-2 w-2 bg-current"></span>
+                 </span>
+              )}
             </button>
             
             {/* Playful Dropdown */}
@@ -98,15 +120,18 @@ export const Header: React.FC = () => {
               <div className="absolute top-full left-0 pt-3 animate-in fade-in slide-in-from-top-4 duration-300">
                 <div className="bg-white text-[#002B66] rounded-2xl p-3 flex flex-col gap-1 min-w-[200px] shadow-[0_8px_24px_rgba(0,0,0,0.2)] border-4 border-[#002B66]/10 relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-[#00E5FF]/30 rounded-bl-full -z-10"></div>
-                  {moreDropdown.map((item) => (
+                  {moreDropdown.map((item) => {
+                    const isActive = location.pathname === item.href;
+                    return (
                     <Link 
                       key={item.label} 
                       to={item.href} 
-                      className="font-bold text-[12px] px-4 py-2.5 rounded-xl hover:bg-[#F4F9FF] hover:text-[#0066FF] hover:scale-[1.02] hover:translate-x-1 transition-all duration-200 uppercase"
+                      className={`font-bold text-[12px] px-4 py-2.5 rounded-xl hover:bg-[#F4F9FF] hover:text-[#0066FF] hover:scale-[1.02] hover:translate-x-1 transition-all duration-200 uppercase flex justify-between items-center ${isActive ? 'bg-[#F4F9FF] text-[#0066FF] translate-x-1' : ''}`}
                     >
                       {item.label}
+                      {isActive && <span className="text-[14px]">🌟</span>}
                     </Link>
-                  ))}
+                  )})}
                 </div>
               </div>
             )}
@@ -160,17 +185,20 @@ export const Header: React.FC = () => {
             <div className="absolute top-2 right-[10%] w-3 h-3 bg-white rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>
             <div className="absolute bottom-6 left-[20%] w-4 h-4 bg-white rounded-full animate-bounce" style={{ animationDuration: '4s' }}></div>
           </div>
-          {[...navigation, ...moreDropdown].map((item, i) => (
+          {[...navigation, ...moreDropdown].map((item, i) => {
+            const isActive = location.pathname === item.href;
+            return (
             <Link 
               key={item.label} 
               to={item.href} 
-              className={`font-body font-black text-lg sm:text-xl uppercase bg-black/10 rounded-2xl px-5 py-3.5 active:scale-95 z-10 hover:bg-black/20 transition-all`}
+              className={`font-body font-black text-lg sm:text-xl uppercase rounded-2xl px-5 py-3.5 active:scale-95 z-10 transition-all flex justify-between items-center ${isActive ? 'bg-white text-[#002B66] scale-[1.02] shadow-md' : 'bg-black/10 hover:bg-black/20'}`}
               style={{ transitionDelay: `${i * 40}ms` }}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {item.label}
+              {isActive && <span className="animate-bounce">🌟</span>}
             </Link>
-          ))}
+          )})}
         </div>
       </div>
     </div>

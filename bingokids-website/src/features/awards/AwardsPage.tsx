@@ -5,7 +5,7 @@ import { biggestWins, bestOfTheRest } from '../../data/awards.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-gradient-to-b from-[#101F3B] via-[#1E3A68] to-[#0D1829] w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
+    <section className="bg-gradient-to-b from-[#172a4e] via-[#689ef4] to-[#8cbaff] w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
       <h1 className="sr-only">BingoKids Awards</h1>
       
       {/* Floating stars & orange/green ambient glows */}
@@ -68,7 +68,7 @@ const BiggestWinsSection = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#0055FF] via-[#003B99] to-[#002666] w-full py-16 sm:py-24 lg:py-32 relative overflow-hidden" ref={revealRef}>
+    <section className="bg-gradient-to-b from-[#719bee] via-[#003B99] to-[#002666] w-full py-16 sm:py-24 lg:py-32 relative overflow-hidden" ref={revealRef}>
       {/* Background doodles */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
          <div className="absolute top-10 left-10 w-64 h-64 rounded-full border-8 border-[#00E676] border-dashed animate-[spin_60s_linear_infinite]"></div>
@@ -77,7 +77,7 @@ const BiggestWinsSection = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center">
-          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white inline-flex items-center gap-3">
+          <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white inline-flex items-center gap-3 tracking-wide drop-shadow-md">
             Our biggest <span className="text-[#FFD600]">wins</span> <span className="text-[#00E676]">★</span>
           </h2>
           <p className="font-body text-lg sm:text-xl lg:text-2xl text-white/90 font-bold mt-4 sm:mt-6 max-w-2xl mx-auto">
@@ -111,7 +111,7 @@ const BestOfRestSection = () => {
     <section className="bg-gradient-to-b from-[#FF7043] via-[#00E676] to-[#002B66] w-full py-16 sm:py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center relative">
-          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white inline-flex items-center gap-4 drop-shadow-md">
+          <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white inline-flex items-center gap-4 drop-shadow-md tracking-wide">
             <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2s' }}>★</span> 
             Best of the rest 
             <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2.5s' }}>★</span>
@@ -160,7 +160,7 @@ export const AwardsPage = () => {
       <HeroSection />
       <BiggestWinsSection />
       <BestOfRestSection />
-      <Footer showQrCard={false} footerBgColorClass="bg-[#FF7043]" />
+      <Footer showQrCard={false} footerBgColorClass="bg-[#FF7043]" footerHeadingColorClass="bg-white text-[#FF7043] px-3 py-1.5 rounded-full w-fit" />
     </div>
   );
 };

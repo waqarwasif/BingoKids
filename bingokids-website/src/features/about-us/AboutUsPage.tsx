@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* Vibrant Poppy Electric Ocean Blue Section */}
       <section className="w-full bg-gradient-to-b from-[#0066FF] via-[#0055FF] to-[#002B66] py-16 sm:py-20 px-4 lg:px-12 flex flex-col items-center relative overflow-hidden">
         <div className="max-w-4xl text-center mb-12 sm:mb-16 z-10">
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white mb-3 sm:mb-4 drop-shadow-md">
+          <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-6xl text-white mb-3 sm:mb-4 drop-shadow-md tracking-wide">
             Kids content <span className="text-[#FFD600]">done right</span>
           </h2>
           <p className="text-lg sm:text-xl lg:text-2xl text-[#00E5FF] font-bold drop-shadow-sm">Created in-house by our award-winning team.</p>
@@ -54,10 +54,10 @@ const MissionSection = () => {
       
       {/* Left side: Text Content */}
       <div className="w-full md:w-1/2 bg-gradient-to-r from-[#FF1493] via-[#FF5252] to-[#FF7043] flex flex-col justify-center px-6 sm:px-8 lg:px-20 py-16 sm:py-24 lg:py-32 z-20">
-        <h4 className="font-display font-black text-[#FFD600] text-base sm:text-lg tracking-wider uppercase mb-3 sm:mb-4">
+        <h4 className="font-superkindly text-[#FFD600] text-lg sm:text-xl tracking-wider uppercase mb-3 sm:mb-4">
           Our mission
         </h4>
-        <h2 className="font-display font-black text-white text-3xl sm:text-4xl lg:text-6xl leading-tight mb-4 sm:mb-6">
+        <h2 className="font-superkindly text-white text-4xl sm:text-5xl lg:text-7xl leading-tight mb-4 sm:mb-6 tracking-wide">
           Help grown-ups raise <span className="text-[#FFD600]">amazing kids</span>
         </h2>
         <p className="font-body font-bold text-white/95 text-base sm:text-lg lg:text-xl max-w-lg mt-2 leading-relaxed">
@@ -82,7 +82,7 @@ const LeadershipSection = () => {
   return (
     <section className="bg-gradient-to-r from-[#00E5FF] via-[#0066FF] to-[#00E676] w-full py-16 sm:py-20 lg:py-32" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16 items-center">
-        <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl text-white text-center drop-shadow-md hover:scale-105 transition-transform duration-300">
+        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white text-center drop-shadow-md tracking-wide hover:scale-105 transition-transform duration-300">
           Leadership <span className="text-[#FFD600]">team</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 w-full">
@@ -109,7 +109,7 @@ const CouncilSection = () => {
     <section className="bg-[#002B66] w-full py-16 sm:py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16 items-center relative z-10">
         <div className="text-center space-y-3 sm:space-y-4">
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl text-white leading-tight drop-shadow-md hover:scale-105 transition-transform duration-300">
+          <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white leading-tight drop-shadow-md tracking-wide hover:scale-105 transition-transform duration-300">
             Bingokids Child Development <span className="text-[#FFD600]">Council</span>
           </h2>
           <p className="font-body text-lg sm:text-xl text-[#00E5FF] font-bold">The good stuff built in from the very beginning.</p>
@@ -161,11 +161,11 @@ const AwardsSection = () => {
         
         {/* Header & Subtitle */}
         <div className="px-6 lg:px-12 flex flex-col gap-3 relative z-20">
-          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-[#002B66] leading-tight drop-shadow-sm">
+          <h2 className="font-superkindly text-6xl sm:text-7xl lg:text-[96px] text-white text-3d-cartoon leading-[1.05] tracking-wide mb-4">
             Award-winning,<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF1493] via-[#0066FF] to-[#00E676]">again & again.</span>
+            <span className="text-[#FF1493] text-3d-cartoon">again & again.</span>
           </h2>
-          <p className="font-body text-xl lg:text-2xl text-[#002B66]/85 font-bold">
+          <p className="font-superkindly text-2xl sm:text-3xl lg:text-[36px] text-white text-3d-cartoon font-bold tracking-wide">
             Recognized globally for safety and innovation.
           </p>
         </div>
@@ -221,7 +221,7 @@ export const AboutUsPage = () => {
       <LeadershipSection />
       <CouncilSection />
       <AwardsSection />
-      <Footer showQrCard={false} footerBgColorClass="bg-[#FFD600]" />
+      <Footer showQrCard={false} footerBgColorClass="bg-[#FFD600]" footerTextColorClass="text-[#002B66]" footerHeadingColorClass="bg-[#002B66] text-[#FFD600] px-3 py-1.5 rounded-full w-fit" />
     </div>
   );
 };

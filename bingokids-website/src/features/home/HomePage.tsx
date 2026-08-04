@@ -23,13 +23,23 @@ const HeroSection = () => {
         
         {/* Left Content */}
         <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left gap-6 lg:mt-[-50px]">
-          <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-[76px] tracking-[-0.02em] leading-[1.05] max-w-[500px] drop-shadow-lg">
-            <span className="text-white">Ultimate kids</span><br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD600] via-[#00E5FF] to-[#00E676]">
-              entertainment
-            </span>
+          <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-[84px] tracking-tight leading-[1.05] max-w-[650px] text-white text-3d-cartoon mb-4">
+            Ultimate kids<br/>
+            <span className="text-[#FFD600]">e</span>
+            <span className="text-[#00E5FF]">n</span>
+            <span className="text-[#FFD600]">t</span>
+            <span className="text-[#00E5FF]">e</span>
+            <span className="text-[#FFD600]">r</span>
+            <span className="text-[#00E5FF]">t</span>
+            <span className="text-[#FFD600]">a</span>
+            <span className="text-[#00E5FF]">i</span>
+            <span className="text-[#FFD600]">n</span>
+            <span className="text-[#00E5FF]">m</span>
+            <span className="text-[#FFD600]">e</span>
+            <span className="text-[#00E5FF]">n</span>
+            <span className="text-[#FFD600]">t</span>
           </h1>
-          <p className="font-body font-bold text-lg sm:text-xl lg:text-[24px] text-white/95 max-w-[400px] leading-[1.4] mb-2 drop-shadow-md">
+          <p className="font-body font-bold text-lg sm:text-xl lg:text-[24px] text-white max-w-[420px] leading-[1.4] mb-4 drop-shadow-md">
             The home of outstanding content<br/>without compromise.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mt-4">
@@ -90,11 +100,17 @@ const HeroSection = () => {
           </div>
           
           {/* Arrow */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-             <span className="font-display font-black text-xs text-white tracking-[0.2em] uppercase drop-shadow-md">Fun this way</span>
-             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="text-white drop-shadow-md">
-                <path d="M6 9l6 6 6-6"/>
-             </svg>
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce cursor-pointer z-20 group" onClick={() => {
+              window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+            }}>
+             <span className="font-display font-black text-sm md:text-base text-[#002B66] bg-[#FFD600] px-5 py-2.5 rounded-full border-4 border-[#002B66] shadow-[4px_4px_0_#002B66] tracking-[0.1em] uppercase group-hover:bg-[#FF6B9D] group-hover:text-white transition-colors duration-300">
+               Fun this way
+             </span>
+             <div className="bg-white rounded-full p-1.5 border-4 border-[#002B66] shadow-[4px_4px_0_#002B66] group-hover:bg-[#FFD600] group-hover:scale-110 transition-all duration-300">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002B66" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                 <path d="M6 9l6 6 6-6"/>
+               </svg>
+             </div>
           </div>
         </div>
       </div>
@@ -133,7 +149,7 @@ const OnDemandSection = () => {
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-8 mb-16 relative z-10">
-        <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-[72px] text-white text-center leading-tight drop-shadow-[4px_4px_0_rgba(0,43,102,0.3)]">
+        <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white text-center leading-tight drop-shadow-[4px_4px_0_rgba(0,43,102,0.3)] tracking-wide">
           Incredible content. <br className="hidden md:block" />
           <span className="text-[#FFD600]">On demand.</span>
         </h2>
@@ -263,11 +279,11 @@ const SeriousAboutFunSection = () => {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center relative z-20">
-        <h2 className="font-display font-black text-4xl sm:text-6xl lg:text-[80px] text-white text-center mb-6 tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.25)]">
-          Serious about <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD600] via-[#FF1493] to-[#00E5FF]">fun</span>
+        <h2 className="font-superkindly text-5xl sm:text-7xl lg:text-[90px] text-white text-center mb-6 tracking-wide text-3d-cartoon">
+          Serious about <span className="text-[#FFD600]">fun</span>
         </h2>
         
-        <p className="font-body font-bold text-lg sm:text-2xl lg:text-[32px] text-white text-center max-w-[700px] mb-12 sm:mb-20 drop-shadow-lg leading-snug">
+        <p className="font-superkindly text-2xl sm:text-3xl lg:text-[40px] text-white text-center max-w-[800px] mb-12 sm:mb-20 drop-shadow-md leading-tight tracking-wide">
           The best educational experts in the world agree: <span className="text-[#FFD600] animate-pulse">fun works.</span>
         </p>
         <div className="w-[150%] sm:w-[120%] lg:w-full max-w-none flex flex-col items-center relative mt-4 lg:mt-6 z-10">
@@ -398,11 +414,11 @@ const AwardsSection = () => {
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
           </div>
-          <h2 className="font-display font-black text-4xl md:text-6xl lg:text-7xl text-[#002B66] leading-[1.1] drop-shadow-sm">
+          <h2 className="font-superkindly text-6xl sm:text-7xl lg:text-[96px] text-white text-3d-cartoon leading-[1.05] tracking-wide mb-4">
             Award-winning, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF1493] via-[#0066FF] to-[#00E676]">again & again.</span>
+            <span className="text-[#FF1493] text-3d-cartoon">again & again.</span>
           </h2>
-          <p className="font-body text-xl lg:text-2xl font-bold text-[#002B66]/85 mt-6">
+          <p className="font-superkindly text-2xl sm:text-3xl lg:text-[36px] text-white text-3d-cartoon font-bold tracking-wide">
             Recognized globally for safety, playfulness, and innovation.
           </p>
         </div>
@@ -482,13 +498,7 @@ const NoAdsSection = () => {
         
         {/* Top Centered Content */}
         <div className="flex flex-col items-center text-center gap-6 mb-16 sm:mb-24">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#FF1493] to-[#FFD600] rounded-3xl flex items-center justify-center p-4 shadow-[0_10px_20px_rgba(255,20,147,0.4)] animate-bounce" style={{ animationDuration: '3s' }}>
-            <svg className="w-full h-full text-white drop-shadow-md" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round">
-              <path d="M12 2L2 22h20L12 2zm0 6l4 10H8l4-10z"/>
-            </svg>
-          </div>
-          
-          <h2 className="font-display font-black text-4xl sm:text-6xl lg:text-[80px] text-white uppercase tracking-tight mt-2 drop-shadow-md leading-[1.1]">
+          <h2 className="font-display font-black text-4xl sm:text-6xl lg:text-[80px] text-white uppercase tracking-tight mt-2 drop-shadow-md leading-[1.1] animate-bounce" style={{ animationDuration: '3s' }}>
             NO ADS. <span className="text-[#FFD600]">EVER.</span>
           </h2>
           
@@ -574,7 +584,7 @@ export const HomePage = () => {
       <TestimonialsSection />
       <AwardsSection />
       <NoAdsSection />
-      <Footer showQrCard={false} />
+      <Footer showQrCard={false} footerHeadingColorClass="bg-white text-[#0066FF] px-3 py-1.5 rounded-full w-fit" />
     </div>
   );
 };

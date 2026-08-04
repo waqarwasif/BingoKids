@@ -17,7 +17,7 @@ const HeroSection = () => {
 
       <div className="w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 relative z-10 my-auto">
         <img 
-          src="/research-hero.jpg" 
+          src="/research-hero.png" 
           alt="Research Hero - Smart mouse with magnifying glass"
           className="w-[92%] sm:w-[82%] md:w-full h-auto max-h-[55vh] lg:max-h-[700px] object-contain object-center drop-shadow-[0_20px_40px_rgba(0,43,102,0.4)] transition-transform duration-300 hover:scale-[1.02]"
         />
@@ -31,7 +31,7 @@ const LearningStandardSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#00E676] via-[#00C853] to-[#004D40] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16">
-        <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-white text-center drop-shadow-md">
+        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white text-center drop-shadow-md tracking-wide">
           Learning as <span className="text-[#FFD600]">standard</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl">
@@ -56,7 +56,7 @@ const ProofSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FF1493] via-[#FF4081] to-[#D81B60] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:pl-12 lg:pr-0 flex flex-col gap-12 overflow-hidden">
-        <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl text-white px-6 lg:px-0 drop-shadow-md">
+        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white px-6 lg:px-0 drop-shadow-md tracking-wide">
           Proof behind the <span className="text-[#FFD600]">play</span>
         </h2>
         <Carousel 
@@ -95,7 +95,7 @@ const IndependentSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FFD600] via-[#FF9800] to-[#FF7043] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:pl-12 lg:pr-0 flex flex-col gap-12 overflow-hidden">
-        <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl text-[#002B66] px-6 lg:px-0 drop-shadow-sm">
+        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-[#002B66] px-6 lg:px-0 drop-shadow-sm tracking-wide">
           Independent <span className="text-white">research</span>
         </h2>
         <Carousel 
@@ -136,7 +136,7 @@ export const ResearchPage = () => {
       <LearningStandardSection />
       <ProofSection />
       <IndependentSection />
-      <Footer showQrCard={false} footerBgColorClass="bg-[#FF1493]" />
+      <Footer showQrCard={false} footerBgColorClass="bg-[#FF1493]" footerHeadingColorClass="bg-white text-[#FF1493] px-3 py-1.5 rounded-full w-fit" />
     </div>
   );
 };

@@ -19,12 +19,20 @@
 
   --font-display: "Gotham Rounded", sans-serif;
   --font-body: "PP Agrandir", sans-serif;
+  --font-superkindly: "SuperKindly", sans-serif;
 }
 
 @font-face {
   font-family: 'Gotham Rounded';
   src: url('./assets/fonts/GothamRoundedBold_21016.ttf') format('truetype');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuperKindly';
+  src: url('./assets/fonts/SuperKindly-drE8E.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -89,6 +97,26 @@
   .animate-gradient-shift {
     background-size: 300% 300%;
     animation: color-shift-trio 8s ease infinite;
+  }
+
+  .text-3d-cartoon {
+    text-shadow: 
+      /* 2px smooth outline */
+      -2px -2px 0 #002B66,
+       2px -2px 0 #002B66,
+      -2px  2px 0 #002B66,
+       2px  2px 0 #002B66,
+      -2px  0px 0 #002B66,
+       2px  0px 0 #002B66,
+       0px -2px 0 #002B66,
+       0px  2px 0 #002B66,
+      /* Lighter 3D Extrusion */
+       0px  4px 0 #002B66,
+       0px  6px 0 #002B66,
+       0px  8px 0 #002B66,
+       0px 10px 0 #002B66,
+      /* Drop Shadow */
+       0px 15px 15px rgba(0, 0, 0, 0.3);
   }
 }
 

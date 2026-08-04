@@ -5,15 +5,22 @@ import { worldsCharacters } from '../../data/ourContent.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-gradient-to-br from-[#00E676] via-[#00E5FF] to-[#0066FF] w-full min-h-[75vh] sm:min-h-[80vh] pt-[130px] sm:pt-[150px] lg:pt-[170px] pb-12 sm:pb-16 flex flex-col items-center justify-center relative z-20" ref={revealRef}>
-      <div className="flex flex-col items-center text-center px-6 relative z-10 mb-6 lg:mb-10">
-        <h2 className="text-[#002B66] font-display font-black text-2xl lg:text-3xl mb-1 tracking-wide drop-shadow-sm uppercase">
-          So many ways to
-        </h2>
-        
+    <section className="relative w-full min-h-[75vh] sm:min-h-[80vh] pt-[130px] sm:pt-[150px] lg:pt-[170px] pb-12 sm:pb-16 flex flex-col items-center justify-center z-20 overflow-hidden" ref={revealRef}>
+      {/* Blurred background effect */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#00E676] via-[#00E5FF] to-[#0066FF]"></div>
+      <div className="absolute inset-0 z-0 bg-white/10 backdrop-blur-2xl"></div>
+      
+      {/* Blurred Orbs for extra depth */}
+      <div className="absolute top-10 left-10 w-[400px] h-[400px] bg-white/30 rounded-full blur-[80px] pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-black/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="flex flex-col items-center text-center px-6 relative z-10 mb-8 lg:mb-14 w-full">
+        {/* Dark smoke effect behind image for text readability */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[60%] lg:h-[80%] bg-[#002B66]/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
         {/* Play characters image */}
-        <div className="flex items-center justify-center mt-2 w-full max-w-sm md:max-w-md lg:max-w-2xl px-4">
-           <img src="/play-characters.png" alt="Play Characters" className="w-full h-auto drop-shadow-xl" />
+        <div className="flex items-center justify-center mt-2 w-full max-w-lg md:max-w-xl lg:max-w-4xl px-4 relative z-10">
+           <img src="/play-characters.png" alt="Play Characters" className="w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700" />
         </div>
       </div>
 
@@ -45,11 +52,11 @@ const IntroSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FF1493] via-[#FF7043] to-[#0066FF] w-full pt-[80px] lg:pt-[120px] pb-16" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-        <h2 className="font-display font-black text-[36px] lg:text-[56px] text-white mb-3 tracking-tight drop-shadow-[0_4px_10px_rgba(0,0,0,0.2)]">
+        <h2 className="font-superkindly text-5xl sm:text-7xl lg:text-[88px] text-white mb-6 tracking-wide text-3d-cartoon leading-tight">
           Content kids <span className="text-[#FFD600]">go crazy for</span>
         </h2>
-        <p className="font-body font-bold text-xl lg:text-2xl text-white/95 leading-snug drop-shadow-sm">
-          Interactive games, songs and<br className="hidden lg:block"/> shows to play on repeat.
+        <p className="font-superkindly text-2xl sm:text-3xl lg:text-[38px] text-white leading-tight tracking-wide text-3d-cartoon max-w-4xl">
+          Interactive games, songs and<br className="hidden lg:block"/> shows to <span className="text-[#00E5FF]">play on repeat.</span>
         </p>
       </div>
     </section>
@@ -64,7 +71,9 @@ const ContentCard = ({
   decorations,
   leftContent,
   imageSrc,
-  floatDelay = '0s'
+  floatDelay = '0s',
+  titleClassName = '',
+  descriptionClassName = ''
 }: any) => {
   const revealRef = useScrollReveal();
   return (
@@ -107,9 +116,9 @@ const ContentCard = ({
 
       {/* Text Content Below */}
       <div className="mt-8 sm:mt-12 text-center px-4 relative z-10">
-        <h3 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#002B66] tracking-tight mb-2 sm:mb-3 drop-shadow-sm">{title}</h3>
+        <h3 className={`font-superkindly text-4xl sm:text-5xl lg:text-6xl tracking-wide mb-2 sm:mb-3 drop-shadow-sm ${titleClassName || 'text-[#002B66]'}`}>{title}</h3>
         {description && (
-           <p className="font-body font-bold text-[#002B66]/85 text-base sm:text-xl lg:text-2xl max-w-md mx-auto leading-tight">{description}</p>
+           <p className={`font-superkindly text-xl sm:text-2xl lg:text-3xl max-w-xl mx-auto leading-tight tracking-wide ${descriptionClassName || 'text-[#002B66]/85'}`}>{description}</p>
         )}
       </div>
       <style>{`
@@ -130,6 +139,8 @@ const FeaturesList = () => {
       <ContentCard
         title="Game on"
         description="Ridiculously fun adventures to play again and again."
+        titleClassName="text-[#FFD600] text-3d-cartoon"
+        descriptionClassName="text-[#FFD600] text-3d-cartoon"
         cardBg="bg-[#0066FF]" // Poppy Electric Ocean Blue
         waveColor="#00E5FF" // Poppy Electric Cyan
         imageSrc="/content-game.jpg"
@@ -230,10 +241,10 @@ const WorldsSection = () => {
     <section className="bg-[#002B66] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-12 lg:gap-16">
         <div className="text-center flex flex-col items-center">
-           <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-6xl text-white tracking-tight mb-2 lg:mb-4">
+           <h2 className="font-superkindly text-4xl sm:text-6xl lg:text-[80px] text-white tracking-wide mb-3 lg:mb-5 leading-tight">
              Worlds to <span className="text-[#FFD600]">explore</span>
            </h2>
-           <p className="font-body text-white/95 text-lg sm:text-xl lg:text-2xl font-bold">
+           <p className="font-superkindly text-xl sm:text-2xl lg:text-[32px] text-white/95 tracking-wide">
              All the characters they love, all in one place.
            </p>
         </div>
@@ -263,7 +274,7 @@ export const OurContentPage = () => {
       <IntroSection />
       <FeaturesList />
       <WorldsSection />
-      <Footer showQrCard={false} footerBgColorClass="bg-[#00E676]" />
+      <Footer showQrCard={false} footerBgColorClass="bg-[#00E676]" footerTextColorClass="text-[#002B66]" footerHeadingColorClass="bg-[#002B66] text-[#00E676] px-3 py-1.5 rounded-full w-fit" />
     </div>
   );
 };
