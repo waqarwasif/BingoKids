@@ -77,7 +77,7 @@ const BiggestWinsSection = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center">
-          <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white inline-flex items-center gap-3 tracking-wide drop-shadow-md">
+          <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-[80px] text-white inline-flex items-center gap-3 tracking-wide drop-shadow-md">
             Our biggest <span className="text-[#FFD600]">wins</span> <span className="text-[#00E676]">★</span>
           </h2>
           <p className="font-body text-lg sm:text-xl lg:text-2xl text-white/90 font-bold mt-4 sm:mt-6 max-w-2xl mx-auto">
@@ -111,7 +111,7 @@ const BestOfRestSection = () => {
     <section className="bg-gradient-to-b from-[#FF7043] via-[#00E676] to-[#002B66] w-full py-16 sm:py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center relative">
-          <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white inline-flex items-center gap-4 drop-shadow-md tracking-wide">
+          <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-[80px] text-white inline-flex items-center gap-4 drop-shadow-md tracking-wide">
             <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2s' }}>★</span> 
             Best of the rest 
             <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2.5s' }}>★</span>

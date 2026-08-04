@@ -23,7 +23,7 @@ const HeroSection = () => {
         
         {/* Left Content */}
         <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left gap-6 lg:mt-[-50px]">
-          <h1 className="font-display font-black text-5xl sm:text-6xl lg:text-[84px] tracking-tight leading-[1.05] max-w-[650px] text-white text-3d-cartoon mb-4">
+          <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-[84px] tracking-tight leading-[1.05] max-w-[650px] text-white text-3d-cartoon mb-4">
             Ultimate kids<br/>
             <span className="text-[#FFD600]">e</span>
             <span className="text-[#00E5FF]">n</span>
@@ -149,7 +149,7 @@ const OnDemandSection = () => {
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-8 mb-16 relative z-10">
-        <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white text-center leading-tight drop-shadow-[4px_4px_0_rgba(0,43,102,0.3)] tracking-wide">
+        <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-[80px] text-white text-center leading-tight drop-shadow-[4px_4px_0_rgba(0,43,102,0.3)] tracking-wide">
           Incredible content. <br className="hidden md:block" />
           <span className="text-[#FFD600]">On demand.</span>
         </h2>
@@ -279,11 +279,11 @@ const SeriousAboutFunSection = () => {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center relative z-20">
-        <h2 className="font-superkindly text-5xl sm:text-7xl lg:text-[90px] text-white text-center mb-6 tracking-wide text-3d-cartoon">
+        <h2 className="font-superkindly text-3xl sm:text-6xl lg:text-[90px] text-white text-center mb-6 tracking-wide text-3d-cartoon">
           Serious about <span className="text-[#FFD600]">fun</span>
         </h2>
         
-        <p className="font-superkindly text-2xl sm:text-3xl lg:text-[40px] text-white text-center max-w-[800px] mb-12 sm:mb-20 drop-shadow-md leading-tight tracking-wide">
+        <p className="font-superkindly text-xl sm:text-3xl lg:text-[40px] text-white text-center max-w-[800px] mb-12 sm:mb-20 drop-shadow-md leading-tight tracking-wide">
           The best educational experts in the world agree: <span className="text-[#FFD600] animate-pulse">fun works.</span>
         </p>
         <div className="w-[150%] sm:w-[120%] lg:w-full max-w-none flex flex-col items-center relative mt-4 lg:mt-6 z-10">
@@ -414,11 +414,11 @@ const AwardsSection = () => {
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
           </div>
-          <h2 className="font-superkindly text-6xl sm:text-7xl lg:text-[96px] text-white text-3d-cartoon leading-[1.05] tracking-wide mb-4">
+          <h2 className="font-superkindly text-3xl sm:text-6xl lg:text-[96px] text-white text-3d-cartoon leading-[1.05] tracking-wide mb-4">
             Award-winning, <br />
             <span className="text-[#FF1493] text-3d-cartoon">again & again.</span>
           </h2>
-          <p className="font-superkindly text-2xl sm:text-3xl lg:text-[36px] text-white text-3d-cartoon font-bold tracking-wide">
+          <p className="font-superkindly text-lg sm:text-2xl lg:text-[36px] text-white text-3d-cartoon font-bold tracking-wide">
             Recognized globally for safety, playfulness, and innovation.
           </p>
         </div>
@@ -498,7 +498,7 @@ const NoAdsSection = () => {
         
         {/* Top Centered Content */}
         <div className="flex flex-col items-center text-center gap-6 mb-16 sm:mb-24">
-          <h2 className="font-display font-black text-4xl sm:text-6xl lg:text-[80px] text-white uppercase tracking-tight mt-2 drop-shadow-md leading-[1.1] animate-bounce" style={{ animationDuration: '3s' }}>
+          <h2 className="font-display font-black text-3xl sm:text-5xl lg:text-[80px] text-white uppercase tracking-tight mt-2 drop-shadow-md leading-[1.1] animate-bounce" style={{ animationDuration: '3s' }}>
             NO ADS. <span className="text-[#FFD600]">EVER.</span>
           </h2>
           

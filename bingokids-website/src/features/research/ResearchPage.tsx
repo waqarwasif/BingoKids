@@ -31,7 +31,7 @@ const LearningStandardSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#00E676] via-[#00C853] to-[#004D40] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16">
-        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white text-center drop-shadow-md tracking-wide">
+        <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-white text-center drop-shadow-md tracking-wide">
           Learning as <span className="text-[#FFD600]">standard</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full max-w-5xl">
@@ -56,7 +56,7 @@ const ProofSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FF1493] via-[#FF4081] to-[#D81B60] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:pl-12 lg:pr-0 flex flex-col gap-12 overflow-hidden">
-        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-white px-6 lg:px-0 drop-shadow-md tracking-wide">
+        <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-white px-6 lg:px-0 drop-shadow-md tracking-wide">
           Proof behind the <span className="text-[#FFD600]">play</span>
         </h2>
         <Carousel 
@@ -95,7 +95,7 @@ const IndependentSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FFD600] via-[#FF9800] to-[#FF7043] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:pl-12 lg:pr-0 flex flex-col gap-12 overflow-hidden">
-        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-[#002B66] px-6 lg:px-0 drop-shadow-sm tracking-wide">
+        <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-[#002B66] px-6 lg:px-0 drop-shadow-sm tracking-wide">
           Independent <span className="text-white">research</span>
         </h2>
         <Carousel 

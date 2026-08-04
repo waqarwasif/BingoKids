@@ -63,7 +63,7 @@ const BlogSection = () => {
     <section className="bg-[#F4F9FF] w-full py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-16 lg:gap-20 items-center relative z-10">
         <div className="flex flex-col items-center gap-4 text-center relative w-full max-w-2xl mx-auto mt-8">
-          <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-[#002B66] tracking-wide">
+          <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-[80px] text-[#002B66] tracking-wide">
             Blog <span className="text-[#00A86B]">★</span>
           </h2>
           <p className="font-body text-lg sm:text-xl lg:text-2xl text-[#002B66]/80 font-bold">
@@ -123,7 +123,7 @@ const DiveDeeperSection = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-12 relative z-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="relative">
-             <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-[#172965] relative z-10 drop-shadow-md tracking-wide">
+             <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-[#172965] relative z-10 drop-shadow-md tracking-wide">
                Dive deeper <span className="text-[#FFD600]"></span>
              </h2>
           </div>
@@ -151,7 +151,7 @@ const InTheMediaSection = () => {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-16 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 relative">
           <div className="relative text-center md:text-left">
-             <h2 className="font-superkindly text-5xl sm:text-6xl lg:text-[80px] text-white relative z-10 drop-shadow-md tracking-wide">
+             <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-white relative z-10 drop-shadow-md tracking-wide">
                In the <span className="text-[#21376c]">media</span>
              </h2>
           </div>
@@ -210,7 +210,7 @@ const PressPackSection = () => {
   return (
     <section className="bg-[#FFFDF0] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col gap-16 items-center">
-        <h2 className="font-superkindly text-4xl sm:text-5xl lg:text-7xl text-[#002B66] text-center drop-shadow-sm tracking-wide">Press pack</h2>
+        <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-[#002B66] text-center drop-shadow-sm tracking-wide">Press pack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
           {[
             { title: 'Media kit', btn: 'Download kit' },

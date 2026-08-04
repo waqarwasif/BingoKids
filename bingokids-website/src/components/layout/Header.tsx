@@ -140,7 +140,7 @@ export const Header: React.FC = () => {
 
         {/* Center Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center group cursor-pointer">
-          <Link to="/" className="font-display font-black text-2xl sm:text-4xl lg:text-5xl tracking-tighter transition-all duration-300 group-hover:scale-110 drop-shadow-[0_4px_0_#002B66] flex items-center">
+          <Link to="/" className="font-display font-black text-xl sm:text-3xl lg:text-5xl tracking-tighter transition-all duration-300 group-hover:scale-110 drop-shadow-[0_4px_0_#002B66] flex items-center">
             <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[-5deg]">B</span>
             <span className="inline-block transition-transform duration-300 group-hover:-translate-y-3 group-hover:rotate-[3deg] delay-75">i</span>
             <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-2deg] delay-100">n</span>
@@ -179,7 +179,7 @@ export const Header: React.FC = () => {
       </header>
 
       {/* Mobile Menu Dropdown */}
-      <div className={`lg:hidden absolute top-[calc(100%+8px)] left-0 w-full ${headerBgClass} rounded-3xl shadow-[0_8px_32px_rgba(0,43,102,0.4)] border-[4px] border-[#002B66] overflow-hidden transition-all duration-500 ease-in-out origin-top ${isMobileMenuOpen ? 'max-h-[600px] opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95 pointer-events-none'}`}>
+      <div className={`lg:hidden absolute top-[calc(100%+8px)] left-0 w-full ${headerBgClass} rounded-3xl shadow-[0_8px_32px_rgba(0,43,102,0.4)] border-[4px] border-[#002B66] overflow-y-auto max-h-[80vh] transition-all duration-500 ease-in-out origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100' : 'max-h-0 opacity-0 scale-y-95 pointer-events-none'}`}>
         <div className="p-6 flex flex-col gap-3 relative">
           <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
             <div className="absolute top-2 right-[10%] w-3 h-3 bg-white rounded-full animate-ping" style={{ animationDuration: '3s' }}></div>

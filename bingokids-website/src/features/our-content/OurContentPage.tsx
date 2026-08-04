@@ -52,10 +52,10 @@ const IntroSection = () => {
   return (
     <section className="bg-gradient-to-b from-[#FF1493] via-[#FF7043] to-[#0066FF] w-full pt-[80px] lg:pt-[120px] pb-16" ref={revealRef}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center text-center">
-        <h2 className="font-superkindly text-5xl sm:text-7xl lg:text-[88px] text-white mb-6 tracking-wide text-3d-cartoon leading-tight">
+        <h2 className="font-superkindly text-3xl sm:text-6xl lg:text-[88px] text-white mb-6 tracking-wide text-3d-cartoon leading-tight">
           Content kids <span className="text-[#FFD600]">go crazy for</span>
         </h2>
-        <p className="font-superkindly text-2xl sm:text-3xl lg:text-[38px] text-white leading-tight tracking-wide text-3d-cartoon max-w-4xl">
+        <p className="font-superkindly text-xl sm:text-3xl lg:text-[38px] text-white leading-tight tracking-wide text-3d-cartoon max-w-4xl">
           Interactive games, songs and<br className="hidden lg:block"/> shows to <span className="text-[#00E5FF]">play on repeat.</span>
         </p>
       </div>
@@ -84,30 +84,30 @@ const ContentCard = ({
       </div>
       
       {/* The Card */}
-      <div className={`w-full max-w-[950px] min-h-[240px] sm:min-h-[340px] md:min-h-0 md:aspect-[16/9] lg:aspect-[2.2/1] ${cardBg} rounded-[32px] sm:rounded-[48px] shadow-[0_16px_0_rgba(0,43,102,0.15)] sm:shadow-[0_24px_0_rgba(0,43,102,0.2)] relative overflow-hidden flex transform hover:-translate-y-2 transition-transform duration-300`}>
+      <div className={`w-full max-w-[950px] min-h-[300px] sm:min-h-[340px] md:min-h-0 md:aspect-[16/9] lg:aspect-[2.2/1] ${cardBg} rounded-[32px] sm:rounded-[48px] shadow-[0_16px_0_rgba(0,43,102,0.15)] sm:shadow-[0_24px_0_rgba(0,43,102,0.2)] relative overflow-hidden flex flex-col sm:flex-row transform hover:-translate-y-2 transition-transform duration-300`}>
         {/* Bubbly Wavy background */}
-        <svg className="absolute left-0 top-0 bottom-0 h-full w-[70%] z-0" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <svg className="absolute left-0 top-0 bottom-0 h-full w-full sm:w-[70%] z-0" preserveAspectRatio="none" viewBox="0 0 100 100">
            <path d="M0,0 L65,0 C95,20 50,45 75,70 C90,85 65,95 70,100 L0,100 Z" fill={waveColor} />
         </svg>
 
         {/* Left Side Content */}
-        <div className="w-[50%] h-full relative z-10 flex items-center justify-center p-2 sm:p-4 lg:p-8">
+        <div className="w-full sm:w-[50%] h-full relative z-10 flex items-center justify-center p-6 sm:p-4 lg:p-8">
            <div className="transform hover:scale-110 transition-transform duration-300 cursor-default">
              {leftContent}
            </div>
         </div>
         
         {/* Right Side Content */}
-        <div className="w-[50%] h-full relative z-10 flex items-center justify-center p-2 sm:p-4 lg:p-10">
+        <div className="w-full sm:w-[50%] h-full relative z-10 flex items-center justify-center p-6 sm:p-4 lg:p-10 min-h-[220px] sm:min-h-0">
            {/* Device Frame / Jar Mockup */}
-           <div className="w-full h-[90%] bg-white rounded-[20px] sm:rounded-[32px] border-[4px] sm:border-[8px] border-white/60 shadow-[0_16px_32px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col relative transform hover:scale-105 hover:rotate-3 transition-transform duration-500 group">
+           <div className="w-full h-full sm:h-[90%] bg-white rounded-[20px] sm:rounded-[32px] border-[4px] sm:border-[8px] border-white/60 shadow-[0_16px_32px_rgba(0,0,0,0.15)] overflow-hidden flex flex-col relative transform hover:scale-105 hover:rotate-3 transition-transform duration-500 group">
              {/* Glossy top bar */}
              <div className="h-5 sm:h-6 lg:h-8 bg-gradient-to-b from-white/90 to-white/40 w-full flex-shrink-0 flex items-center px-3 sm:px-4 gap-1.5 sm:gap-2 border-b border-white/20">
                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#FF1493]"></div>
                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#FFD600]"></div>
                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#0066FF]"></div>
              </div>
-             <div className="w-full h-full overflow-hidden relative bg-black/5">
+             <div className="w-full h-full overflow-hidden relative bg-black/5 min-h-[160px]">
                 <img src={imageSrc} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
              </div>
            </div>
@@ -241,7 +241,7 @@ const WorldsSection = () => {
     <section className="bg-[#002B66] w-full py-16 lg:py-24" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-12 lg:gap-16">
         <div className="text-center flex flex-col items-center">
-           <h2 className="font-superkindly text-4xl sm:text-6xl lg:text-[80px] text-white tracking-wide mb-3 lg:mb-5 leading-tight">
+           <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-[80px] text-white tracking-wide mb-3 lg:mb-5 leading-tight">
              Worlds to <span className="text-[#FFD600]">explore</span>
            </h2>
            <p className="font-superkindly text-xl sm:text-2xl lg:text-[32px] text-white/95 tracking-wide">
