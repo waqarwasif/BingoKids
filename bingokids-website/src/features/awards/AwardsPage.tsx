@@ -1,4 +1,3 @@
-
 import { Footer } from '../../components/layout/Footer';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { biggestWins, bestOfTheRest } from '../../data/awards.data';
@@ -6,14 +5,23 @@ import { biggestWins, bestOfTheRest } from '../../data/awards.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="bg-[#ff6eb8] w-full pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
-      <h1 className="sr-only">Awards</h1>
-      <img 
-        src="/awards-hero-new.png" 
-        alt="BingoKids Awards - 3D Characters Celebrating"
-        className="w-full max-w-[1400px] h-auto object-contain px-4 md:px-8 relative z-10"
-      />
-                                       </section>
+    <section className="bg-gradient-to-b from-[#101F3B] via-[#1E3A68] to-[#0D1829] w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
+      <h1 className="sr-only">BingoKids Awards</h1>
+      
+      {/* Floating stars & orange/green ambient glows */}
+      <div className="absolute top-20 left-[10%] text-[#FF7043] opacity-80 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>
+      <div className="absolute bottom-8 right-[12%] text-[#00E676] opacity-90 text-4xl sm:text-5xl animate-pulse">✨</div>
+      <div className="absolute top-1/3 right-[8%] w-24 h-24 sm:w-32 sm:h-32 bg-[#FF7043]/20 rounded-full blur-2xl animate-ping" style={{ animationDuration: '4s' }}></div>
+      <div className="absolute bottom-1/4 left-[8%] w-28 h-28 sm:w-40 sm:h-40 bg-[#00E676]/20 rounded-full blur-2xl animate-pulse"></div>
+
+      <div className="w-full max-w-[1300px] flex flex-col items-center relative z-10 px-4 my-auto">
+        <img 
+          src="/awards-hero-new.png" 
+          alt="BingoKids Awards - 3D Characters Celebrating"
+          className="w-[94%] sm:w-[85%] md:w-full h-auto max-h-[55vh] lg:max-h-[700px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:scale-[1.02] transition-transform duration-500"
+        />
+      </div>
+    </section>
   );
 };
 
@@ -24,13 +32,13 @@ const BiggestWinsSection = () => {
   const topRow = biggestWins.slice(0, 3);
   const bottomRow = biggestWins.slice(3, 5);
 
-  // Kinder Kind award styles
+  // Kinder Kind award styles paired with Orange, Green, Pink, Cyan, Yellow
   const awardStyles = [
-    { bg: 'bg-gradient-to-br from-[#fbd15f] to-[#ff8a00]', text: 'text-[#162a45]', icon: '🏆', accent: 'border-[#162a45]' },
-    { bg: 'bg-gradient-to-br from-[#e0bdff] to-[#ff6eb8]', text: 'text-white', icon: '✨', accent: 'border-white' },
-    { bg: 'bg-gradient-to-br from-[#a3edf8] to-[#0284c7]', text: 'text-white', icon: '🌟', accent: 'border-white' },
-    { bg: 'bg-gradient-to-br from-[#bde22a] to-[#0284c7]', text: 'text-[#162a45]', icon: '⭐', accent: 'border-[#162a45]' },
-    { bg: 'bg-gradient-to-br from-[#ff6eb8] to-[#fbd15f]', text: 'text-white', icon: '⚡', accent: 'border-white' },
+    { bg: 'bg-gradient-to-br from-[#FF9800] to-[#FF7043]', text: 'text-white', icon: '🏆', accent: 'border-white' },
+    { bg: 'bg-gradient-to-br from-[#FF1493] to-[#FF4081]', text: 'text-white', icon: '✨', accent: 'border-white' },
+    { bg: 'bg-gradient-to-br from-[#00E5FF] to-[#0066FF]', text: 'text-white', icon: '🌟', accent: 'border-white' },
+    { bg: 'bg-gradient-to-br from-[#00E676] to-[#00B0FF]', text: 'text-[#002B66]', icon: '⭐', accent: 'border-[#002B66]' },
+    { bg: 'bg-gradient-to-br from-[#FFD600] to-[#FF9800]', text: 'text-[#002B66]', icon: '⚡', accent: 'border-[#002B66]' },
   ];
 
   const renderCard = (award: any, globalIndex: number) => {
@@ -38,7 +46,7 @@ const BiggestWinsSection = () => {
     return (
       <div 
         key={globalIndex} 
-        className={`group relative rounded-[2.5rem] p-5 sm:p-6 lg:p-8 flex flex-col items-center justify-center gap-4 sm:gap-6 w-full max-w-[320px] aspect-square ${style.bg} border-[4px] sm:border-[5px] ${style.accent} shadow-[8px_8px_0_0_#0f172a] sm:shadow-[12px_12px_0_0_#0f172a] hover:shadow-[0px_0px_0_0_#0f172a] transition-all duration-300 hover:translate-x-[8px] sm:hover:translate-x-[12px] hover:translate-y-[8px] sm:hover:translate-y-[12px] cursor-pointer overflow-hidden`}
+        className={`group relative rounded-[2.5rem] p-5 sm:p-6 lg:p-8 flex flex-col items-center justify-center gap-4 sm:gap-6 w-full max-w-[320px] aspect-square ${style.bg} border-[4px] sm:border-[5px] ${style.accent} shadow-[8px_8px_0_0_#0a1120] sm:shadow-[12px_12px_0_0_#0a1120] hover:shadow-[0px_0px_0_0_#0a1120] transition-all duration-300 hover:translate-x-[8px] sm:hover:translate-x-[12px] hover:translate-y-[8px] sm:hover:translate-y-[12px] cursor-pointer overflow-hidden`}
       >
         {/* Shine effect */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-40 bg-gradient-to-tr from-transparent via-white to-transparent -translate-x-full group-hover:translate-x-full transition-all duration-700 ease-in-out skew-x-12 z-0"></div>
@@ -51,7 +59,7 @@ const BiggestWinsSection = () => {
           {award.name}
         </h3>
         
-        {/* Small badge */}
+        {/* Winner badge */}
         <div className="absolute top-4 right-4 sm:top-5 sm:right-5 bg-white/30 backdrop-blur-md rounded-full px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-bold text-white shadow-sm border border-white/40">
           Winner
         </div>
@@ -60,19 +68,19 @@ const BiggestWinsSection = () => {
   };
 
   return (
-    <section className="bg-[#162a45] w-full py-16 sm:py-24 lg:py-32 relative overflow-hidden" ref={revealRef}>
+    <section className="bg-gradient-to-b from-[#0055FF] via-[#003B99] to-[#002666] w-full py-16 sm:py-24 lg:py-32 relative overflow-hidden" ref={revealRef}>
       {/* Background doodles */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-5">
-         <div className="absolute top-10 left-10 w-64 h-64 rounded-full border-8 border-white border-dashed animate-[spin_60s_linear_infinite]"></div>
-         <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full border-8 border-white border-dashed animate-[spin_40s_linear_infinite_reverse]"></div>
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-10">
+         <div className="absolute top-10 left-10 w-64 h-64 rounded-full border-8 border-[#00E676] border-dashed animate-[spin_60s_linear_infinite]"></div>
+         <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full border-8 border-[#FF7043] border-dashed animate-[spin_40s_linear_infinite_reverse]"></div>
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center">
-          <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-white inline-flex items-center gap-4">
-            Our biggest wins
+          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white inline-flex items-center gap-3">
+            Our biggest <span className="text-[#FFD600]">wins</span> <span className="text-[#00E676]">★</span>
           </h2>
-          <p className="font-body text-lg sm:text-xl lg:text-2xl text-white/80 mt-4 sm:mt-6 max-w-2xl mx-auto">
+          <p className="font-body text-lg sm:text-xl lg:text-2xl text-white/90 font-bold mt-4 sm:mt-6 max-w-2xl mx-auto">
             Setting the standard for world-class entertainment and educational play.
           </p>
         </div>
@@ -95,30 +103,18 @@ const BiggestWinsSection = () => {
 
 const BestOfRestSection = () => {
   const revealRef = useScrollReveal();
-  // Vibrant brand colors for the icons
-  const colors = ['bg-[#ff8a00]', 'bg-[#ff6eb8]', 'bg-[#bde22a]', 'bg-[#0284c7]'];
-  const textColors = ['text-[#ff8a00]', 'text-[#ff6eb8]', 'text-[#bde22a]', 'text-[#0284c7]'];
+  // Paired Green & Orange theme palette
+  const colors = ['bg-[#FF7043]', 'bg-[#00E676]', 'bg-[#FFD600]', 'bg-[#0066FF]'];
+  const textColors = ['text-[#FF7043]', 'text-[#00E676]', 'text-[#FFD600]', 'text-[#0066FF]'];
 
   return (
-    <section className="bg-[#f0f9ff] w-full py-16 sm:py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
-      {/* Decorative background elements */}
-      <div className="absolute top-10 right-10 w-32 h-32 opacity-10 pointer-events-none">
-        <svg viewBox="0 0 100 100" fill="none" stroke="#162a45" strokeWidth="4">
-          <circle cx="50" cy="50" r="40" strokeDasharray="10 10" />
-        </svg>
-      </div>
-      <div className="absolute bottom-10 left-10 w-24 h-24 opacity-10 pointer-events-none">
-        <svg viewBox="0 0 100 100" fill="none" stroke="#162a45" strokeWidth="4">
-          <polygon points="50,10 90,90 10,90" />
-        </svg>
-      </div>
-
+    <section className="bg-gradient-to-b from-[#FF7043] via-[#00E676] to-[#002B66] w-full py-16 sm:py-20 lg:py-32 relative overflow-hidden" ref={revealRef}>
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-12 lg:gap-16 relative z-10">
         <div className="text-center relative">
-          <h2 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl text-[#162a45] inline-flex items-center gap-4">
-            <span className="text-[#ff8a00] animate-bounce" style={{ animationDuration: '2s' }}>★</span> 
+          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-7xl text-white inline-flex items-center gap-4 drop-shadow-md">
+            <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2s' }}>★</span> 
             Best of the rest 
-            <span className="text-[#ff6eb8] animate-bounce" style={{ animationDuration: '2.5s' }}>★</span>
+            <span className="text-[#FFD600] animate-bounce" style={{ animationDuration: '2.5s' }}>★</span>
           </h2>
         </div>
         
@@ -129,17 +125,17 @@ const BestOfRestSection = () => {
             return (
               <div 
                 key={i} 
-                className="group relative bg-white rounded-3xl p-5 sm:p-6 lg:p-8 flex items-center gap-4 sm:gap-6 border-[3px] border-transparent hover:border-[#2E1A47] shadow-[0_10px_30px_rgba(46,26,71,0.05)] hover:shadow-[8px_8px_0_0_#2E1A47] transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                className="group relative bg-white/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 lg:p-8 flex items-center gap-4 sm:gap-6 border-[4px] border-white shadow-[0_15px_30px_rgba(0,43,102,0.2)] hover:shadow-[8px_8px_0_0_#002B66] transition-all duration-300 hover:-translate-y-2 cursor-pointer"
               >
                 {/* Colorful Star Icon */}
-                <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl ${colorClass} flex items-center justify-center text-white flex-shrink-0 shadow-inner group-hover:scale-110 group-hover:rotate-[15deg] group-hover:rounded-full transition-all duration-500`}>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-2xl ${colorClass} flex items-center justify-center text-white flex-shrink-0 shadow-md group-hover:scale-110 group-hover:rotate-[15deg] group-hover:rounded-full transition-all duration-500`}>
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                   </svg>
                 </div>
                 
                 {/* Award Name */}
-                <span className="font-body font-bold text-lg sm:text-xl lg:text-2xl leading-tight text-[#2E1A47] pr-4 sm:pr-8">
+                <span className="font-body font-black text-lg sm:text-xl lg:text-2xl leading-tight text-[#002B66] pr-4 sm:pr-8">
                   {award}
                 </span>
                 
@@ -158,14 +154,14 @@ const BestOfRestSection = () => {
   );
 };
 
-const AwardsPage = () => {
+export const AwardsPage = () => {
   return (
-    <>
+    <div className="w-full flex flex-col min-h-screen">
       <HeroSection />
       <BiggestWinsSection />
       <BestOfRestSection />
-      <Footer qrBgColorClass="bg-brand-cream" />
-    </>
+      <Footer showQrCard={false} footerBgColorClass="bg-[#FF7043]" />
+    </div>
   );
 };
 

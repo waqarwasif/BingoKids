@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-purple: #0077ff;       /* Vibrant Kid-Friendly Royal Blue for header, footer & hero */
-  --color-brand-purpleDark: #0055cc;   /* Rich Deep Ocean Blue for high-contrast text */
-  --color-brand-purpleAccent: #38bdf8; /* Bright Sky Blue */
-  --color-brand-cream: #f0f9ff;        /* Soft Sky Tinted Cream */
-  --color-brand-cyan: #a3edf8;         /* Sky Blue */
-  --color-brand-cyanBright: #00d4ff;   /* Bright Cyan */
-  --color-brand-yellow: #fbd15f;       /* Sunshine Yellow */
-  --color-brand-yellowPale: #fffbeb;   /* Warm Pale Yellow */
-  --color-brand-pink: #ff2a85;         /* Vibrant Rich Kid Pink */
-  --color-brand-green: #32e37b;        /* Vibrant Kid Green */
-  --color-brand-mint: #bde22a;         /* Lime Green */
-  --color-brand-lavender: #e0bdff;     /* Soft Lavender */
-  --color-brand-orange: #ff8a00;       /* Bright Playful Orange */
-  --color-brand-orangeCta: #fbd15f;    /* Yellow CTA */
+  --color-brand-purple: #0066FF;       /* Poppy Electric Ocean Blue */
+  --color-brand-purpleDark: #002B66;   /* Deep Navy for crystal clear text */
+  --color-brand-purpleAccent: #00E5FF; /* Poppy Electric Aqua */
+  --color-brand-cream: #F4F9FF;        /* Soft Sky Cream Canvas */
+  --color-brand-cyan: #00E5FF;         /* Electric Aqua Seafoam */
+  --color-brand-cyanBright: #00D4FF;   /* Bright Cyan */
+  --color-brand-yellow: #FFD600;       /* Poppy Sunshine Yellow */
+  --color-brand-yellowPale: #FFFDF0;   /* Light Warm Yellow */
+  --color-brand-pink: #FF1493;         /* Poppy Hot Pink */
+  --color-brand-green: #00E676;        /* Poppy Electric Sea Green */
+  --color-brand-mint: #00E5FF;         /* Seafoam Mint */
+  --color-brand-lavender: #E0BDFF;     /* Soft Lavender */
+  --color-brand-orange: #FF7043;       /* Poppy Bright Coral */
+  --color-brand-orangeCta: #FFD600;    /* Yellow CTA */
   --color-brand-white: #ffffff;
 
   --font-display: "Gotham Rounded", sans-serif;
@@ -58,10 +58,10 @@
 
 @layer base {
   body {
-    @apply font-body text-brand-purple bg-brand-cream antialiased selection:bg-brand-purpleAccent selection:text-brand-white;
+    @apply font-body text-[#002B66] bg-[#F4F9FF] antialiased selection:bg-[#00E5FF] selection:text-[#002B66];
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-brand-purple;
+    @apply font-display text-[#002B66];
   }
 }
 
