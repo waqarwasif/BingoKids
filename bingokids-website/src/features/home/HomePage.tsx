@@ -433,7 +433,7 @@ const AwardsSection = () => {
           <div className="relative bg-white p-3 lg:p-5 rounded-[3rem] shadow-[0_20px_40px_rgba(0,43,102,0.25)] transition-transform duration-500 group-hover:-translate-y-4 border-4 border-white">
             <img 
               src="/awards-hero-new.png" 
-              alt="Bingokids characters with trophy" 
+              alt="Kidzee characters with trophy" 
               className="w-full h-auto object-cover rounded-[2.5rem]"
               onError={(e) => { e.currentTarget.src = "/awards-hero-new.png"; }}
             />
@@ -552,15 +552,15 @@ const NoAdsSection = () => {
                    <rect x="7" y="14" width="3" height="3"></rect>
                    <path d="M14 14h3v3h-3z"></path>
                  </svg>
-                 <span className="font-display font-black text-xs uppercase tracking-wider text-[#002B66]">BINGOKIDS APP</span>
+                 <span className="font-display font-black text-xs uppercase tracking-wider text-[#002B66]">KIDZEE APP</span>
               </div>
               
               <div className="flex flex-col gap-3">
                 <a href="#" className="transform hover:scale-105 transition-transform duration-300 inline-block shadow-lg rounded-xl overflow-hidden border-2 border-white/40">
-                  <img src="/app-store-badge.svg" alt="Download on App Store" className="h-12 w-auto" />
+                  <img src="/app-store-badge.jpg" alt="Download on App Store" className="h-14 w-auto object-cover" />
                 </a>
                 <a href="#" className="transform hover:scale-105 transition-transform duration-300 inline-block shadow-lg rounded-xl overflow-hidden border-2 border-white/40">
-                  <img src="/google-play-badge.png" alt="Get it on Google Play" className="h-12 w-auto" />
+                  <img src="/google-play-badge.jpg" alt="Get it on Google Play" className="h-14 w-auto object-cover" />
                 </a>
               </div>
             </div>

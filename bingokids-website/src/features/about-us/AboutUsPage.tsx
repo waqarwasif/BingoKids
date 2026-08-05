@@ -110,7 +110,7 @@ const CouncilSection = () => {
       <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col gap-12 lg:gap-16 items-center relative z-10">
         <div className="text-center space-y-3 sm:space-y-4">
           <h2 className="font-superkindly text-3xl sm:text-5xl lg:text-7xl text-white leading-tight drop-shadow-md tracking-wide hover:scale-105 transition-transform duration-300">
-            Bingokids Child Development <span className="text-[#FFD600]">Council</span>
+            Kidzee Child Development <span className="text-[#FFD600]">Council</span>
           </h2>
           <p className="font-body text-lg sm:text-xl text-[#00E5FF] font-bold">The good stuff built in from the very beginning.</p>
         </div>

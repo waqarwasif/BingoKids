@@ -38,7 +38,7 @@ const HeroSection = () => {
              
              {/* Inner bezel */}
              <div className="w-full bg-black rounded-[14px] lg:rounded-[28px] overflow-hidden relative shadow-inner">
-                <img src="/app-ui-bingo.jpg" alt="BingoKids App UI Mockup" className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-700" />
+                <img src="/app-ui-bingo.jpg" alt="Kidzee App UI Mockup" className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-700" />
              </div>
            </div>
         </div>
@@ -256,7 +256,7 @@ const WorldsSection = () => {
                    <img src={char.image} alt={char.name} className="w-full h-full object-cover bg-white" />
                 </div>
                 <div className="absolute -bottom-6 lg:-bottom-8 left-1/2 -translate-x-1/2 w-[160%] text-center transform group-hover:scale-110 group-hover:-translate-y-2 transition-transform duration-300 z-20 flex flex-col items-center">
-                   <span className="bg-[#0066FF] text-[#FFD600] px-3 py-1 rounded-full font-body text-[8px] lg:text-[10px] font-bold tracking-widest uppercase mb-1 shadow-md border border-[#FFD600]/40">Bingokids</span>
+                   <span className="bg-[#0066FF] text-[#FFD600] px-3 py-1 rounded-full font-body text-[8px] lg:text-[10px] font-bold tracking-widest uppercase mb-1 shadow-md border border-[#FFD600]/40">Kidzee</span>
                    <p className="font-display font-black text-white text-2xl lg:text-4xl leading-none" style={{ WebkitTextStroke: '2px rgba(0,0,0,0.3)', textShadow: '0 6px 12px rgba(0,0,0,0.8)' }}>{char.name}</p>
                 </div>
              </div>
@@ -274,7 +274,7 @@ export const OurContentPage = () => {
       <IntroSection />
       <FeaturesList />
       <WorldsSection />
-      <Footer showQrCard={false} footerBgColorClass="bg-[#00E676]" footerTextColorClass="text-[#002B66]" footerHeadingColorClass="bg-[#002B66] text-[#00E676] px-3 py-1.5 rounded-full w-fit" />
+      <Footer showQrCard={false} footerBgColorClass="bg-[#00E676]" footerTextColorClass="text-white" footerHeadingColorClass="text-[#002B66]" />
     </div>
   );
 };

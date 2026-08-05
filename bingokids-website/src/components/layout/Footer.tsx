@@ -26,9 +26,9 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16 lg:mb-24">
           {/* Column 1 */}
           <div className="flex flex-col gap-6">
-            <h4 className={`font-body font-black text-sm tracking-widest ${footerHeadingColorClass} uppercase drop-shadow-sm`}>GET BINGOKIDS</h4>
+            <h4 className={`font-body font-black text-sm tracking-widest ${footerHeadingColorClass} uppercase drop-shadow-sm`}>GET KIDZEE</h4>
             <ul className="flex flex-col gap-4">
-              {footerData.getBingokids.map(link => (
+              {footerData.getKidzee.map(link => (
                 <li key={link.label}>
                   <a href={link.href} className="font-body font-bold text-lg text-current hover:opacity-70 transition-opacity">{link.label}</a>
                 </li>
@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Logo */}
         <div className="flex justify-center mb-16">
           <Link to="/" className="font-display font-black text-3xl sm:text-5xl lg:text-7xl tracking-tight text-current hover:opacity-90 transition-opacity">
-            Bingokids
+            Kidzee
           </Link>
         </div>
         

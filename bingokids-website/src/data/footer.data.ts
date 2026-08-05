@@ -1,7 +1,7 @@
 import type { FooterLinks } from '../types/content.types';
 
 export const footerData: FooterLinks = {
-  getBingokids: [
+  getKidzee: [
     { label: 'Redeem a code', href: '#' },
     { label: 'Subscribe', href: '#' },
     { label: 'Shop', href: '#' },

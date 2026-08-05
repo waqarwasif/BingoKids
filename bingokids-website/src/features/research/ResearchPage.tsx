@@ -7,7 +7,7 @@ const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
     <section className="w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] relative overflow-hidden bg-gradient-to-b from-[#00E5FF] via-[#00B0FF] to-[#0066FF] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col justify-center items-center" ref={revealRef}>
-      <h1 className="sr-only">BingoKids Research</h1>
+      <h1 className="sr-only">Kidzee Research</h1>
       
       {/* Animated Water Bubbles & Floating Sparkles */}
       <div className="absolute top-20 left-[8%] text-[#FFD600] opacity-90 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>

@@ -8,7 +8,7 @@ const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
     <section className="w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] relative overflow-hidden bg-gradient-to-br from-[#F4A460] via-[#E08D49] to-[#FF7043] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col justify-center items-center" ref={revealRef}>
-      <h1 className="sr-only">BingoKids News</h1>
+      <h1 className="sr-only">Kidzee News</h1>
       
       {/* Floating sparkles & stars */}
       <div className="absolute top-20 left-[10%] text-[#FFD600] opacity-90 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>
@@ -67,7 +67,7 @@ const BlogSection = () => {
             Blog <span className="text-[#00A86B]">★</span>
           </h2>
           <p className="font-body text-lg sm:text-xl lg:text-2xl text-[#002B66]/80 font-bold">
-            Latest stories from inside Bingokids.
+            Latest stories from inside Kidzee.
           </p>
         </div>
         

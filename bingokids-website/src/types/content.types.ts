@@ -4,7 +4,7 @@ export interface NavLink {
 }
 
 export interface FooterLinks {
-  getBingokids: NavLink[];
+  getKidzee: NavLink[];
   contactUs: NavLink[];
   forEducators: NavLink[];
   followUs: NavLink[];

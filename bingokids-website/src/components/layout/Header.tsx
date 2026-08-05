@@ -17,15 +17,18 @@ export const Header: React.FC = () => {
   let headerBgClass = 'bg-[#0066FF] text-white';
   let hoverTextClass = 'hover:bg-white hover:text-[#0066FF]';
   let badgeBgClass = 'bg-[#00E676] text-[#002B66]';
+  let logoTextClass = 'text-white drop-shadow-[0_4px_0_#002B66]';
 
   if (isOurContent) {
     headerBgClass = 'bg-[#00E676] text-[#002B66]';
     hoverTextClass = 'hover:bg-[#002B66] hover:text-white';
     badgeBgClass = 'bg-[#FFD600] text-[#002B66]';
+    logoTextClass = 'text-white drop-shadow-[0_4px_0_#002B66]'; // Crisp 3D White Logo with Deep Navy Shadow on Sea Green!
   } else if (isAboutUs) {
     headerBgClass = 'bg-[#FFD600] text-[#002B66]'; // Poppy Sunshine Yellow
     hoverTextClass = 'hover:bg-[#002B66] hover:text-white';
     badgeBgClass = 'bg-[#FF1493] text-white';
+    logoTextClass = 'text-white drop-shadow-[0_4px_0_#002B66]'; // Crisp 3D White Logo on Sunshine Yellow!
   } else if (isAwards) {
     headerBgClass = 'bg-[#FF7043] text-white'; // Poppy Coral Orange
     hoverTextClass = 'hover:bg-white hover:text-[#FF7043]';
@@ -51,7 +54,7 @@ export const Header: React.FC = () => {
           <div className="absolute top-8 left-[90%] w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDuration: '2.5s' }}></div>
         </div>
 
-        <div className="mx-auto px-4 sm:px-6 lg:px-10 h-[72px] flex items-center justify-between relative z-10">
+        <div className="mx-auto px-3 sm:px-6 lg:px-10 h-[72px] flex items-center justify-between relative z-10">
 
         {/* Mobile Hamburger Button */}
         <button 
@@ -140,16 +143,13 @@ export const Header: React.FC = () => {
 
         {/* Center Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center group cursor-pointer">
-          <Link to="/" className="font-display font-black text-xl sm:text-3xl lg:text-5xl tracking-tighter transition-all duration-300 group-hover:scale-110 drop-shadow-[0_4px_0_#002B66] flex items-center">
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[-5deg]">B</span>
+          <Link to="/" className={`font-display font-black text-2xl sm:text-3xl lg:text-5xl tracking-tighter ${logoTextClass} transition-all duration-300 group-hover:scale-110 flex items-center`}>
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[-5deg]">K</span>
             <span className="inline-block transition-transform duration-300 group-hover:-translate-y-3 group-hover:rotate-[3deg] delay-75">i</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-2deg] delay-100">n</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[4deg] delay-150">g</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-3deg] delay-200">o</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[5deg] delay-300">k</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-2deg] delay-75">i</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[2deg] delay-150">d</span>
-            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-4deg] delay-100">s</span>
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-2deg] delay-100">d</span>
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[4deg] delay-150">z</span>
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-[-3deg] delay-200">e</span>
+            <span className="inline-block transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-[5deg] delay-300">e</span>
           </Link>
         </div>
 

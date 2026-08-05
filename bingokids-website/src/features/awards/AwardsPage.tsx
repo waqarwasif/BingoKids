@@ -6,7 +6,7 @@ const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
     <section className="bg-gradient-to-b from-[#172a4e] via-[#689ef4] to-[#8cbaff] w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col items-center justify-center relative overflow-hidden" ref={revealRef}>
-      <h1 className="sr-only">BingoKids Awards</h1>
+      <h1 className="sr-only">Kidzee Awards</h1>
       
       {/* Floating stars & orange/green ambient glows */}
       <div className="absolute top-20 left-[10%] text-[#FF7043] opacity-80 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>
@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="w-full max-w-[1300px] flex flex-col items-center relative z-10 px-4 my-auto">
         <img 
           src="/awards-hero-new.png" 
-          alt="BingoKids Awards - 3D Characters Celebrating"
+          alt="Kidzee Awards - 3D Characters Celebrating"
           className="w-[94%] sm:w-[85%] md:w-full h-auto max-h-[55vh] lg:max-h-[700px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] hover:scale-[1.02] transition-transform duration-500"
         />
       </div>

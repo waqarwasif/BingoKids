@@ -8,7 +8,7 @@ export const blogPosts: BlogPost[] = [
 
 export const deepDivePosts: BlogPost[] = [
   { tag: 'Learning', title: 'Why Play is Important', image: '/playing-kids.jpg', link: '#' },
-  { tag: 'News', title: 'Bingokids wins new award', image: '/bingo-award.jpg', link: '#' },
+  { tag: 'News', title: 'Kidzee wins new award', image: '/bingo-award.jpg', link: '#' },
   { tag: 'Parenting', title: 'Dealing with tantrums', image: '/tantrums.jpg', link: '#' },
   { tag: 'Health', title: 'Healthy snacks for kids', image: '/healthy-snacks.jpg', link: '#' },
   { tag: 'Activities', title: 'Indoor games for rainy days', image: '/indoor-games.jpg', link: '#' },
@@ -16,7 +16,7 @@ export const deepDivePosts: BlogPost[] = [
 ];
 
 export const pressMentions: PressMention[] = [
-  { title: 'Bingokids is a pre-switch treat...', outlet: 'The New York Times', link: '#', logo: '/education.jpg' },
+  { title: 'Kidzee is a pre-switch treat...', outlet: 'The New York Times', link: '#', logo: '/education.jpg' },
   { title: 'The perfect app for toddlers...', outlet: 'TechCrunch', link: '#', logo: '/playing-kids.jpg' },
   { title: 'Making learning fun and engaging.', outlet: 'Forbes', link: '#', logo: '/indoor-games.jpg' },
   { title: 'A safe space for digital play.', outlet: 'Wired', link: '#', logo: '/math-games.jpg' },
