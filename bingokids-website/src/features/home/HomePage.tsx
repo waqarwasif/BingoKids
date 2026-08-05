@@ -19,7 +19,7 @@ const HeroSection = () => {
         <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-16 pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-24 sm:pb-36 lg:pb-48 flex flex-col lg:flex-row items-center gap-12 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-16 pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-32 sm:pb-40 lg:pb-48 flex flex-col lg:flex-row items-center gap-12 relative z-10">
         
         {/* Left Content */}
         <div className="w-full lg:w-[45%] flex flex-col items-center lg:items-start text-center lg:text-left gap-6 lg:mt-[-50px]">
@@ -78,7 +78,7 @@ const HeroSection = () => {
 
       {/* Bottom Floating Elements */}
       <div className="absolute bottom-0 left-0 right-0 z-20 flex flex-col pointer-events-none">
-        <div className="max-w-[1440px] w-full mx-auto px-6 lg:px-16 relative h-20">
+        <div className="max-w-[1440px] w-full mx-auto px-6 lg:px-16 relative h-24">
           
           {/* Snail */}
           <div className="absolute bottom-0 left-[35%] w-32 h-32 hidden lg:block z-30 transition-transform duration-700 hover:scale-110 pointer-events-auto cursor-pointer">
@@ -99,15 +99,15 @@ const HeroSection = () => {
             </svg>
           </div>
           
-          {/* Arrow */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 animate-bounce cursor-pointer z-20 group" onClick={() => {
+          {/* Arrow Indicator - Placed gracefully below the video frame */}
+          <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce cursor-pointer z-30 pointer-events-auto group" onClick={() => {
               window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
             }}>
-             <span className="font-display font-black text-sm md:text-base text-[#002B66] bg-[#FFD600] px-5 py-2.5 rounded-full border-4 border-[#002B66] shadow-[4px_4px_0_#002B66] tracking-[0.1em] uppercase group-hover:bg-[#FF6B9D] group-hover:text-white transition-colors duration-300">
+             <span className="font-display font-black text-xs sm:text-sm md:text-base text-[#002B66] bg-[#FFD600] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border-3 sm:border-4 border-[#002B66] shadow-[3px_3px_0_#002B66] sm:shadow-[4px_4px_0_#002B66] tracking-[0.1em] uppercase group-hover:bg-[#FF6B9D] group-hover:text-white transition-colors duration-300">
                Fun this way
              </span>
-             <div className="bg-white rounded-full p-1.5 border-4 border-[#002B66] shadow-[4px_4px_0_#002B66] group-hover:bg-[#FFD600] group-hover:scale-110 transition-all duration-300">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#002B66" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+             <div className="bg-white rounded-full p-1 sm:p-1.5 border-3 sm:border-4 border-[#002B66] shadow-[3px_3px_0_#002B66] sm:shadow-[4px_4px_0_#002B66] group-hover:bg-[#FFD600] group-hover:scale-110 transition-all duration-300">
+               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#002B66" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
                  <path d="M6 9l6 6 6-6"/>
                </svg>
              </div>

@@ -7,20 +7,31 @@ import { blogPosts, deepDivePosts, pressMentions } from '../../data/news.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] relative overflow-hidden bg-gradient-to-br from-[#F4A460] via-[#E08D49] to-[#FF7043] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 flex flex-col justify-center items-center" ref={revealRef}>
+    <section className="w-full min-h-screen min-h-[100dvh] relative overflow-hidden bg-gradient-to-br from-[#F4A460] via-[#E08D49] to-[#FF7043] pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-10 sm:pb-14 flex flex-col justify-between items-center" ref={revealRef}>
       <h1 className="sr-only">Kidzee News</h1>
       
       {/* Floating sparkles & stars */}
       <div className="absolute top-20 left-[10%] text-[#FFD600] opacity-90 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>
-      <div className="absolute bottom-8 right-[12%] text-white opacity-90 text-4xl sm:text-5xl animate-pulse">✨</div>
+      <div className="absolute bottom-16 right-[12%] text-white opacity-90 text-4xl sm:text-5xl animate-pulse">✨</div>
       <div className="absolute top-1/3 right-[8%] w-24 h-24 sm:w-32 sm:h-32 bg-white/20 rounded-full blur-2xl animate-ping" style={{ animationDuration: '4s' }}></div>
 
       <div className="w-full max-w-[1400px] mx-auto flex justify-center items-center px-4 relative z-10 my-auto">
         <img 
           src="/news-hero.png" 
           alt="News Hero - Panda reading a newspaper"
-          className="w-[92%] sm:w-[82%] md:w-full h-auto max-h-[55vh] lg:max-h-[700px] object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-[1.02]"
+          className="w-[88%] sm:w-[78%] md:w-full h-auto max-h-[60vh] sm:max-h-[65vh] lg:max-h-[720px] object-contain object-center drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-[1.02]"
         />
+      </div>
+
+      {/* Down arrow scroll indicator */}
+      <div className="relative z-10 animate-bounce pb-4 cursor-pointer" onClick={() => {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+      }}>
+        <div className="bg-white/90 backdrop-blur-md rounded-full p-2.5 border-2 border-white shadow-lg text-[#002B66] hover:bg-[#FFD600] transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </div>
       </div>
     </section>
   );

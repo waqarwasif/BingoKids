@@ -8,11 +8,11 @@ const HeroSection = () => {
   return (
     <>
       {/* Vibrant Poppy Orangish Radiant Sunset Hero */}
-      <section className="bg-gradient-to-br from-[#FF4500] via-[#FF652F] to-[#FFB300] w-full min-h-[55vh] sm:min-h-[65vh] lg:min-h-[70vh] pt-[115px] sm:pt-[135px] lg:pt-[155px] pb-8 sm:pb-12 relative overflow-hidden flex flex-col items-center justify-center" ref={revealRef}>
+      <section className="bg-gradient-to-br from-[#FF4500] via-[#FF652F] to-[#FFB300] w-full min-h-screen min-h-[100dvh] pt-[120px] sm:pt-[140px] lg:pt-[160px] pb-10 sm:pb-14 relative overflow-hidden flex flex-col items-center justify-between" ref={revealRef}>
         
         {/* Animated Cute Undersea Sparkles & Floating Stars */}
         <div className="absolute top-16 left-[8%] text-[#FFD600] opacity-90 text-3xl sm:text-4xl animate-bounce" style={{ animationDuration: '3s' }}>⭐</div>
-        <div className="absolute bottom-12 right-[10%] text-white opacity-80 text-4xl sm:text-5xl animate-pulse">✺</div>
+        <div className="absolute bottom-16 right-[10%] text-white opacity-80 text-4xl sm:text-5xl animate-pulse">✺</div>
         <div className="absolute top-32 right-[18%] w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full blur-sm animate-ping" style={{ animationDuration: '4s' }}></div>
         <div className="absolute bottom-20 left-[12%] w-12 h-12 sm:w-16 sm:h-16 bg-[#FFD600]/25 rounded-full blur-md animate-bounce" style={{ animationDuration: '3.5s' }}></div>
 
@@ -21,8 +21,19 @@ const HeroSection = () => {
           <img 
             src="/serious-about-fun.png" 
             alt="We're Serious About Fun" 
-            className="w-[94%] sm:w-[85%] md:w-full h-auto max-h-[55vh] lg:max-h-[700px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
+            className="w-[88%] sm:w-[78%] md:w-full h-auto max-h-[60vh] sm:max-h-[65vh] lg:max-h-[720px] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
           />
+        </div>
+
+        {/* Down arrow scroll indicator */}
+        <div className="relative z-10 animate-bounce pb-4 cursor-pointer" onClick={() => {
+          window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+        }}>
+          <div className="bg-white/90 backdrop-blur-md rounded-full p-2.5 border-2 border-white shadow-lg text-[#002B66] hover:bg-[#FFD600] transition-colors">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </div>
         </div>
       </section>
 
