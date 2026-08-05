@@ -5,7 +5,7 @@ import { worldsCharacters } from '../../data/ourContent.data';
 const HeroSection = () => {
   const revealRef = useScrollReveal();
   return (
-    <section className="relative w-full min-h-[75vh] sm:min-h-[80vh] pt-[130px] sm:pt-[150px] lg:pt-[170px] pb-12 sm:pb-16 flex flex-col items-center justify-center z-20 overflow-hidden" ref={revealRef}>
+    <section className="relative w-full min-h-[75vh] sm:min-h-[80vh] lg:min-h-0 pt-[130px] sm:pt-[150px] lg:pt-[170px] pb-12 sm:pb-16 lg:pb-24 flex flex-col items-center justify-center z-20 overflow-hidden" ref={revealRef}>
       {/* Blurred background effect */}
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#00E676] via-[#00E5FF] to-[#0066FF]"></div>
       <div className="absolute inset-0 z-0 bg-white/10 backdrop-blur-2xl"></div>
@@ -41,6 +41,17 @@ const HeroSection = () => {
                 <img src="/app-ui-bingo.jpg" alt="Kidzee App UI Mockup" className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-700" />
              </div>
            </div>
+        </div>
+      </div>
+
+      {/* Down arrow scroll indicator - Mobile & Tablet only */}
+      <div className="relative z-30 animate-bounce pb-2 mt-8 lg:hidden cursor-pointer" onClick={() => {
+        window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+      }}>
+        <div className="bg-white/90 backdrop-blur-md rounded-full p-2.5 border-2 border-white shadow-lg text-[#002B66] hover:bg-[#FFD600] transition-colors">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
         </div>
       </div>
     </section>
