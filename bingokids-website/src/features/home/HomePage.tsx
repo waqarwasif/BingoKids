@@ -62,6 +62,7 @@ const HeroSection = () => {
                {homeHero.video ? (
                  <video 
                    src={homeHero.video} 
+                   preload="auto"
                    autoPlay 
                    loop 
                    muted 
@@ -69,7 +70,7 @@ const HeroSection = () => {
                    className="w-full h-full object-cover"
                  />
                ) : (
-                 <img src="/app-ui-bingo.jpg" alt="Game Screenshot" className="w-full h-full object-cover" />
+                 <img src="/app-ui-bingo.jpg" alt="Game Screenshot" loading="eager" decoding="async" className="w-full h-full object-cover" />
                )}
              </div>
           </div>

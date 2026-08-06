@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/layout/Header';
+import { InitialLoader } from './components/common/InitialLoader';
 
 // Scroll to top helper on route change
 const ScrollToTop = () => {
@@ -24,6 +25,7 @@ const ResearchPage = React.lazy(() => import('./features/research/ResearchPage')
 export const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
+      <InitialLoader />
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-brand-cream">
         <Header />
